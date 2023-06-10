@@ -51,7 +51,7 @@
                 <div class="mb-4 pb-2 border-b-2 border-black" >
                     <b class="text-xl">Los mejores reviews</b>
                 </div>
-                <div class="flex justify-around ">
+                <div class="flex justify-around">
                     <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
                         <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
