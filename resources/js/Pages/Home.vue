@@ -42,11 +42,62 @@
                             <option value="">2</option>
                             <option value="">3</option>
                         </select>
-                        <input type="text" class="border-0 bg-gray-200 border-l-4 border-black" placeholder="Buscar por barda">
-                       
+                        <input type="text" class="border-0 bg-gray-200 border-l-4 border-black placeholder-black"  placeholder="Buscar por barda">
                     </form>
                 </div>
             </section>
+            <!-- Section - The best -->
+            <div class="px-8">
+                <div class="mb-4 pb-2 border-b-2 border-black" >
+                    <b class="text-xl">Los mejores reviews</b>
+                </div>
+                <div class="flex justify-around ">
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                        <div class="p-4 flex justify-center flex-col">
+                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
+                            <div class="font-sans">
+                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
+                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
+                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                        <div class="p-4 flex justify-center flex-col">
+                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
+                            <div class="font-sans">
+                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
+                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
+                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                        <div class="p-4 flex justify-center flex-col">
+                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
+                            <div class="font-sans">
+                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
+                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
+                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                        <div class="p-4 flex justify-center flex-col">
+                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
+                            <div class="font-sans">
+                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
+                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
+                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
