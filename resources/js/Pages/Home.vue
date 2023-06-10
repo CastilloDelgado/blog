@@ -52,8 +52,19 @@
                     <b class="text-xl">Los mejores reviews</b>
                 </div>
                 <div class="flex justify-around ">
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
+                        <div class="p-4 flex justify-center flex-col">
+                            <b class="font-serif text-center mb-3">Flores y Fuego</b>
+                            <div class="font-sans">
+                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
+                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
+                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                        <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
                             <div class="font-sans">
@@ -63,8 +74,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                        <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
                             <div class="font-sans">
@@ -74,21 +85,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
+                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                        <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition hover:shadow-[-6px_6px_0_0_rgb(0,0,0,0.5)]">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
+                            <b class="font-serif text-center mb-3">Men I Trust</b>
                             <div class="font-sans">
                                 <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
                                 <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
