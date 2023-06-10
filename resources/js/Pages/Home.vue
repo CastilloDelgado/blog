@@ -52,8 +52,8 @@
                     <b class="text-xl">Los mejores reviews</b>
                 </div>
                 <div class="flex justify-around">
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 ">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Flores y Fuego</b>
                             <div class="font-sans">
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Men I Trust</b>
@@ -116,9 +116,9 @@
                 <div class="mb-4 pb-2 border-b-2 border-black" >
                     <b class="text-xl">Reviews random para ti</b>
                 </div>
-                <div class="flex justify-around ">
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
+                <div class="flex justify-around">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 ">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Flores y Fuego</b>
                             <div class="font-sans">
@@ -128,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Men I Trust</b>
@@ -181,9 +181,9 @@
                 <div class="mb-4 pb-2 border-b-2 border-black" >
                     <b class="text-xl">Reviews por fecha</b>
                 </div>
-                <div class="flex justify-around ">
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
+                <div class="flex justify-around">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
+                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 ">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Flores y Fuego</b>
                             <div class="font-sans">
@@ -193,7 +193,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
@@ -215,7 +215,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-64 bg-gray-300 hover:scale-[1.02] transition">
+                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
                         <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0">
                         <div class="p-4 flex justify-center flex-col">
                             <b class="font-serif text-center mb-3">Men I Trust</b>
@@ -235,8 +235,6 @@
                 <p class="font-sans ml-2">[blog]</p>
             </div>
             <p class="text-sm">Creado por <b>Marco Castillo</b></p>
-                    
-
         </footer>
     </div>
 </template>
