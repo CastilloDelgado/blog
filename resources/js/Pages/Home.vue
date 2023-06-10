@@ -17,17 +17,22 @@
         </section>
         <div class="bg-white container mx-auto px-6 py-4">
             <!-- Title -->
-            <section class="flex justify-center flex-col">
-                <div class="flex justify-center py-12">
+            <section class="flex justify-center flex-col py-12">
+                <div class="flex justify-center mb-8">
                     <p class="font-serif font-bold text-5xl">Life & Live Music</p>
                     <p class="font-sans ml-2 text-2xl">[blog]</p>
                 </div>
-                <div class="flex justify-center">
+                <div class="flex justify-center mb-12">
                     <div class="w-1/2">
                         <p class="text-3xl text-center">
                             Fotos <b>horribles</b> y buenas <b>historias</b> de momentos <b>innolvidables</b>.
                         </p>
                     </div>
+                </div>
+                <div>
+                    <p class="text-center">
+                        Utiliza los filtros para buscar un review de tu interés.
+                    </p>
                 </div>
                 <div class="flex justify-center">
                     <form action="#" class="mt-4" >
