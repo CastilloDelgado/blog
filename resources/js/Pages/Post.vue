@@ -16,6 +16,14 @@
             </nav>
         </section>
         <div class="bg-white container mx-auto py-4">
+
+            <!-- Post Layout -->
+            <div class="flex pt-12">
+                <div class="w-2/5 bg-gray-300">Hello</div>
+                <div class="w3/5 bg-gray-500">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias alias sint esse adipisci, porro tenetur debitis, maxime deserunt dolore odio veritatis quidem nulla, molestiae itaque! Sint deserunt ducimus exercitationem laboriosam.</p>
+                </div>
+            </div>
             
             <!-- Banner 2 -->
             <section class="flex mb-8">
