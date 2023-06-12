@@ -27,13 +27,13 @@
                         </div>
                         <div class="flex">
                            <!-- Tag -->
-                            <div class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white">
+                            <div class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
                                 <p class="text-sm">Punk</p> 
                             </div>
-                            <div class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white">
+                            <div class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
                                 <p class="text-sm">Rock</p> 
                             </div>
-                            <div class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white">
+                            <div class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
                                 <p class="text-sm">Underground</p> 
                             </div>
                         </div>
