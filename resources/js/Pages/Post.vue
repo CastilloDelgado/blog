@@ -34,14 +34,8 @@
                         </div>
                         <div class="flex">
                            <!-- Tag -->
-                            <div class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                                <p class="text-sm">Punk</p> 
-                            </div>
-                            <div class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                                <p class="text-sm">Rock</p> 
-                            </div>
-                            <div class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                                <p class="text-sm">Underground</p> 
+                           <div v-for="tag in post.tags" class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
+                                <p class="text-sm">{{ tag.name }}</p> 
                             </div>
                         </div>
                     </div>
@@ -54,8 +48,8 @@
                                 <img src="../../images/concert-4.jpeg" alt="" class="w-24" >
                             </div>
                             <div class="my-0 text-sm">
-                                <p class="font-bold">Marco Antonio Castillo Delgado</p>
-                                <p>Marzo 29, 2023</p>
+                                <p class="font-bold">{{ post.author.name }}</p>
+                                <p>{{ post.published_at }}</p>
                             </div>
                         </div>
                     </div>
@@ -66,38 +60,13 @@
                         <div class="mb-8">
                             <p class="font-sans">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="text-xl text-justify mb-4">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias alias sint esse adipisci, porro tenetur debitis, maxime deserunt dolore odio veritatis quidem nulla, molestiae itaque! Sint deserunt ducimus exercitationem laboriosam.</p>
+
+                        <div v-for="paragraph in post.paragraphs" class="text-xl text-justify mb-4">
+                            <p>{{ paragraph.text }}</p>
                         </div>
-                        <div class="text-xl text-justify mb-4">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto ab beatae, nam quo quae adipisci, magni, rem optio pariatur magnam totam. Sit commodi odit blanditiis. Numquam consectetur suscipit est quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quisquam maiores ipsa? Tempora possimus iure itaque voluptatem dignissimos quisquam voluptates nesciunt quibusdam repudiandae, nisi rem tenetur corporis ullam maxime nulla? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quaerat quia neque, illo a quo porro ipsa obcaecati numquam inventore laudantium blanditiis ipsam, molestiae ducimus. Deserunt illum voluptatem ea eligendi.</p>
-                        </div>  
-                        <div class="text-xl text-justify mb-4">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugit eum placeat odio nemo quae doloremque cupiditate quibusdam et quam minus porro illum officia dolorum praesentium ipsum, eaque quidem exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores, voluptate rem suscipit at pariatur similique voluptatum omnis, ducimus totam porro saepe illum soluta voluptates veniam excepturi facilis odit labore!</p>
-                        </div>
+
                         <div class="grid grid-cols-3 gap-4 mb-4">
-                            <img src="../../images/concert-1.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-2.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-3.jpeg" alt="" class="border-4 border-black">
-                        </div>
-                        <div class="text-xl text-justify mb-4">
-                           <p class="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aut magnam harum? Officiis harum quae quidem placeat, asperiores, maiores tenetur ipsa.</p>
-                        </div>
-                        <div class="text-xl text-justify mb-4">
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aut magnam harum? Officiis harum quae quidem placeat, asperiores, maiores tenetur ipsa, id repellat cupiditate dolore totam vero nam obcaecati odit? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim doloremque fugiat magni earum aliquid possimus esse, quos tempore! Provident, porro ab? In voluptatem atque ea eligendi mollitia totam veniam sit?</p>
-                        </div>
-                        <div class="grid grid-cols-4 gap-4 mb-4">
-                            <img src="../../images/concert-1.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-2.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-3.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-4.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-1.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-2.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-3.jpeg" alt="" class="border-4 border-black">
-                            <img src="../../images/concert-4.jpeg" alt="" class="border-4 border-black">
-                        </div>
-                        <div class="text-xl text-justify mb-4">
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugiat alias cum. Quos nostrum fuga a facilis optio eum, vel eligendi, sed nemo cum atque est dolor omnis amet ducimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam quos. Ipsam totam, consectetur optio explicabo molestiae, dolor voluptatibus, laudantium voluptas eum minus molestias magni est esse. Ad, vitae quas.</p>
+                            <img v-for="image in post.images" v-bind:src="image.image_url" alt="" class="border-4 border-black">
                         </div>
                     </div>
                 </div>

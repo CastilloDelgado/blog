@@ -32,7 +32,7 @@ Route::get('/', function(){
 
 Route::get('/post/{post}', function($id){
     return Inertia::render('Post', [
-        'post' => Post::find($id)
+        'post' => Post::with(['author', 'tags', 'paragraphs', 'images'])->find($id)
     ]);
 });
 
