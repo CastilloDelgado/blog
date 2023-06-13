@@ -14,11 +14,16 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('excerpt');
-            $table->text('body');
+            $table->string('location');
+            $table->string('address');
+            $table->string('country');
+            $table->string('state');
+            $table->string('city');
+            $table->string('image_url');
+            $table->timestamp('concert_date');
+            $table->unsignedBigInteger('user_id');
             $table->timestamp('published_at')->nullable;
             $table->string('band');
-            $table->timestamp('concert_date');
             $table->timestamps();
         });
     }
