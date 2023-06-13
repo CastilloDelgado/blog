@@ -1,3 +1,10 @@
+<script setup>
+
+    defineProps({
+        post: Object
+    })
+</script>
+
 <template>
     <div class="bg-gray-200">
         <section class="bg-white">
@@ -54,7 +61,7 @@
                     </div>
                     <div class="w-4/5 pl-12">
                         <div class="mb-4">
-                            <p class="font-serif text-4xl font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            <p class="font-serif text-4xl font-bold">{{ post?.title || "No title" }}</p>
                         </div>
                         <div class="mb-8">
                             <p class="font-sans">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
