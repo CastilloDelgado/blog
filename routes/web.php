@@ -27,14 +27,18 @@ use App\Models\Post;
 // });
 
 Route::get('/', function(){
-    return Inertia::render('Home');
+    return Inertia::render('Home', [
+        'bestPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
+        'randomPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
+        'latestPosts' => Post::with('author')->latest()->take(4)->get()
+    ]);
 });
 
 Route::get('/post/{post}', function($id){
     return Inertia::render('Post', [
         'post' => Post::with(['author', 'tags', 'paragraphs', 'images'])->find($id)
     ]);
-});
+})->name('posts.show');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

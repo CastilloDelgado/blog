@@ -1,5 +1,12 @@
 <script setup>
     import { Head } from '@inertiajs/vue3';
+    import PostBadge from '@/Components/PostBadge.vue';
+
+    defineProps({
+        bestPosts: Array,
+        randomPosts: Array,
+        latestPosts: Array,
+    })
 </script>
 
 <template>
@@ -57,50 +64,7 @@
                     <b class="text-xl">Los mejores reviews</b>
                 </div>
                 <div class="flex justify-around">
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0  border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Flores y Fuego</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Men I Trust</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
+                    <PostBadge v-for="post in bestPosts" :post="post" />
                 </div>
             </section>
             <!-- Banner 1 -->
@@ -122,50 +86,7 @@
                     <b class="text-xl">Reviews random para ti</b>
                 </div>
                 <div class="flex justify-around">
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0  border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Flores y Fuego</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Men I Trust</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
+                    <PostBadge v-for="post in randomPosts" :post="post" />
                 </div>
             </section>
             <!-- Banner 2 -->
@@ -187,50 +108,7 @@
                     <b class="text-xl">Reviews por fecha</b>
                 </div>
                 <div class="flex justify-around">
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-1.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Flores y Fuego</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-2.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-3.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Amyl and the Sniffers</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-64 bg-gray-300 shadow-[-10px_10px_0px_0px_rgba(0,0,0,1)] border-2 border-black" >
-                        <img src="../../images/concert-4.jpeg" alt="" class="w-64 h-64 object-cover grayscale hover:grayscale-0 border-b-2 border-black">
-                        <div class="p-4 flex justify-center flex-col">
-                            <b class="font-serif text-center mb-3">Men I Trust</b>
-                            <div class="font-sans">
-                                <p class="text-sm"><b>Lugar</b> C3 Stage, Guadalaja, Jalisco, México </p>
-                                <p class="text-sm"><b>Fecha</b> Marzo 29, 2023 </p>
-                                <p class="text-sm"><b>Autor</b> Marco Antonio Castillo Delgado </p>
-                            </div>
-                        </div>
-                    </div>
+                    <PostBadge v-for="post in latestPosts" :post="post" />
                 </div>
             </section>
         </div>

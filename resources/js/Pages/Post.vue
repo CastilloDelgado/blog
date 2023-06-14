@@ -1,4 +1,5 @@
 <script setup>
+    import { Head } from '@inertiajs/vue3';
 
     defineProps({
         post: Object
@@ -6,6 +7,7 @@
 </script>
 
 <template>
+    <Head :title="post.title" />
     <div class="bg-gray-200">
         <section class="bg-white">
             <nav class="flex justify-between px-6 py-4 border-b-4 border-black">
