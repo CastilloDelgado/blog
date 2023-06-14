@@ -1,5 +1,6 @@
 <script setup>
     import { Head } from '@inertiajs/vue3';
+    import { Link } from '@inertiajs/vue3'
 
     defineProps({
         post: Object
@@ -9,21 +10,7 @@
 <template>
     <Head :title="post.title" />
     <div class="bg-gray-200">
-        <section class="bg-white">
-            <nav class="flex justify-between px-6 py-4 border-b-4 border-black">
-                <div>
-                    <a class="flex" href="#">
-                        <p class="font-serif font-bold text-3xl">Life & Live Music</p>
-                        <p class="font-sans ml-2">[blog]</p>
-                    </a>
-                </div>
-                <div class="flex items-center ">
-                    <a href="#" class="mr-3 font-bold" >Home</a>
-                    <a href="#" class="mr-3" >Login</a>
-                    <a href="#" class="" >Newsletter</a>
-                </div>
-            </nav>
-        </section>
+        
         <div class="bg-white container mx-auto py-4">
 
             <!-- Post Layout -->
@@ -32,7 +19,9 @@
                     <div class="w-1/5"></div>
                     <div class="w-4/5 pl-12 mb-4 flex justify-between">
                         <div>
-                            <p class="font-bold text-sm hover:underline">{{ "< Regresar" }}</p>
+                            <Link :href="route('home')">
+                                <p class="font-bold text-sm hover:underline">{{ "< Regresar" }}</p>
+                            </Link>
                         </div>
                         <div class="flex">
                            <!-- Tag -->

@@ -32,7 +32,7 @@ Route::get('/', function(){
         'randomPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
         'latestPosts' => Post::with('author')->latest()->take(4)->get()
     ]);
-});
+})->name('home');
 
 Route::get('/post/{post}', function($id){
     return Inertia::render('Post', [
