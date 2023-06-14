@@ -35,17 +35,17 @@
                         <div class="flex">
                            <!-- Tag -->
                            <div v-for="tag in post.tags" class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                                <p class="text-sm">{{ tag.name }}</p> 
+                                <p class="text-sm capitalize" >{{ tag.name }}</p> 
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="flex">
                     <div class="w-1/5">
-                        <img src="../../images/concert-4.jpeg" alt="" class="mb-6">
+                        <img :src="post.image_url" alt="" class="mb-6 border-2 border-black">
                         <div class="flex flex-row" >
                             <div class="object-cover mr-4">
-                                <img src="../../images/concert-4.jpeg" alt="" class="w-24" >
+                                <img :src="post.author.image_url" alt="" class="w-24 border-2 border-black" >
                             </div>
                             <div class="my-0 text-sm">
                                 <p class="font-bold">{{ post.author.name }}</p>
@@ -58,7 +58,7 @@
                             <p class="font-serif text-4xl font-bold">{{ post?.title || "No title" }}</p>
                         </div>
                         <div class="mb-8">
-                            <p class="font-sans">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                            <p class="font-sans">{{ post.address }}</p>
                         </div>
 
                         <div v-for="paragraph in post.paragraphs" class="text-xl text-justify mb-4">
