@@ -1,7 +1,10 @@
 <script setup>
     import Layout from '@/Components/Layout.vue';
-import { Head } from '@inertiajs/vue3';
+    import TagBadge from '@/Components/TagBadge.vue';
+    import PostProfileBadge from '@/Components/PostProfileBadge.vue';
+    import { Head } from '@inertiajs/vue3';
     import { Link } from '@inertiajs/vue3'
+import PostMainImage from '@/Components/PostMainImage.vue';
 
     defineProps({
         post: Object
@@ -24,25 +27,15 @@ import { Head } from '@inertiajs/vue3';
                                 </Link>
                             </div>
                             <div class="flex">
-                            <!-- Tag -->
-                            <div v-for="tag in post.tags" class="mr-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                                    <p class="text-sm capitalize" >{{ tag.name }}</p> 
-                                </div>
+                                <!-- Tag -->
+                                <TagBadge  v-for="tag in post.tags" :tag="tag" />
                             </div>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="w-1/5">
-                            <img :src="post.image_url" alt="" class="mb-6 border-2 border-black">
-                            <div class="flex flex-row" >
-                                <div class="object-cover mr-4">
-                                    <img :src="post.author.image_url" alt="" class="w-24 border-2 border-black" >
-                                </div>
-                                <div class="my-0 text-sm">
-                                    <p class="font-bold">{{ post.author.name }}</p>
-                                    <p>{{ post.published_at }}</p>
-                                </div>
-                            </div>
+                            <PostMainImage :image_url="post.image_url" />
+                            <PostProfileBadge :published_at="post.published_at"  :author="post.author"/>
                         </div>
                         <div class="w-4/5 pl-12">
                             <div class="mb-4">
