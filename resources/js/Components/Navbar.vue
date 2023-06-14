@@ -1,15 +1,6 @@
-<script setup>
-    import { Head } from '@inertiajs/vue3';
-
-    defineProps({
-        post: Object
-    })
-</script>
-
-
 <template>
-    <section class="bg-white">
-            <nav class="flex justify-between px-6 py-4 border-b-4 border-black">
+    <nav class="bg-white fixed top-0 left-0 right-0 z-50">
+            <div class="flex justify-between px-6 py-4 border-b-4 border-black">
                 <div>
                     <a class="flex" href="#">
                         <p class="font-serif font-bold text-3xl">Life & Live Music</p>
@@ -21,6 +12,6 @@
                     <a href="#" class="mr-3" >Login</a>
                     <a href="#" class="" >Newsletter</a>
                 </div>
-            </nav>
-        </section>
+            </div>
+        </nav>
 </template>
