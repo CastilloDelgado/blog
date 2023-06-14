@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="grid grid-cols-3 gap-4 mb-4">
-                            <img v-for="image in post.images" v-bind:src="image.image_url" alt="" class="border-4 border-black">
+                            <img v-for="image in post.images" v-bind:src="image.image_url" alt="" class="border-2 border-black">
                         </div>
                     </div>
                 </div>
