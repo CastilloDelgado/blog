@@ -8,9 +8,9 @@
                     </a>
                 </div>
                 <div class="flex items-center ">
-                    <a href="#" class="mr-3 font-bold" >Home</a>
-                    <a href="#" class="mr-3" >Login</a>
-                    <a href="#" class="" >Newsletter</a>
+                    <a href="#" class="hover:underline mr-3 font-bold" >Home</a>
+                    <a href="#" class="hover:underline mr-3" >Login</a>
+                    <a href="#" class="hover:underline " >Newsletter</a>
                 </div>
             </div>
         </nav>
