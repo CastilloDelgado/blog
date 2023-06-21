@@ -5,8 +5,8 @@
     import Banner1 from '@/Components/Banner1.vue';
     import { Head } from '@inertiajs/vue3';
     import { Link } from '@inertiajs/vue3'
-import PostMainImage from '@/Components/PostMainImage.vue';
-
+    import PostMainImage from '@/Components/PostMainImage.vue';
+    
     defineProps({
         post: Object
     })

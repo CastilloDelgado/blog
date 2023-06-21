@@ -34,7 +34,11 @@ Route::get('/', function(){
     ]);
 })->name('home');
 
-Route::get('/post/{post}', function($id){
+Route::get('/posts/create', function(){
+    return Inertia::render('CreatePost');
+})->name('posts.create');
+
+Route::get('/posts/{post}', function($id){
     return Inertia::render('Post', [
         'post' => Post::with(['author', 'tags', 'paragraphs', 'images'])->find($id)
     ]);
