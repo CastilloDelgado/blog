@@ -15,7 +15,7 @@
                     <a href="#" class="hover:underline mr-3 font-bold" >Home</a>
                     <a href="#" class="hover:underline mr-3" >Login</a>
                     <a href="#" class="hover:underline mr-3" >Newsletter</a>
-                    <Link href="/posts/create">Create Post</Link>
+                    <Link :href="route('posts.create')">Create Post</Link>
                 </div>
             </div>
         </nav>

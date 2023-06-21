@@ -7,7 +7,7 @@ import Navbar from './Navbar.vue';
 
 <template>
     <Navbar />
-        <div class="pt-16">
+        <div class="pt-16 bg-white">
             <slot />    
         </div>
     <Footer />
