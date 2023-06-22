@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -37,6 +38,8 @@ Route::get('/', function(){
 Route::get('/posts/create', function(){
     return Inertia::render('CreatePost');
 })->name('posts.create');
+
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
 Route::get('/posts/{post}', function($id){
     return Inertia::render('Post', [
