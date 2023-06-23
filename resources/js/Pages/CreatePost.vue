@@ -74,11 +74,11 @@ function submit(){
                     <label for="postImages" class="ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
                         Click here to add more images!
                     </label>
-                    <input id="postImages" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
+                    <input id="postImages" class="hidden" type="file" multiple @input="form.postImages = $event.target.files"  />
                 </div>
                 <div class="mb-4 w-full flex">
                     <label class="self-start" for="text">Share yourself!</label>
-                    <textarea class="ml-4 w-1/2" id="text"  v-model="form.text" rows="20" />
+                    <textarea class="ml-4 w-1/2" id="text"  v-model="form.text" rows="10" />
                 </div>
                 <button type="submit" class="w-1/3 cleaml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Create Post!</button>
             </form>

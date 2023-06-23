@@ -12,6 +12,8 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);

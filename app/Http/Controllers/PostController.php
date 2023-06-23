@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Post;
+use App\Models\Paragraph;
+use App\Models\PostImage;
 
 class PostController extends Controller
 {
@@ -21,10 +24,39 @@ class PostController extends Controller
             ]);
 
             $file = $request->file('image');
-    
-            $result = Storage::put('', $file);
-            $imageUrl = Storage::temporaryUrl("Svct7YO0VxxFliyGe2jx4kd22RFZiNS8Xm6tXyO1.png", now()->addMinutes(5));
-            return($imageUrl);
+            $imageUrl = Storage::put('', $file);
+
+            $post = Post::create([
+                'title' => $request->title,
+                'location' => $request->location,
+                'address' => $request->address,
+                'country' => $request->country,
+                'state' => $request->state,
+                'city' => $request->city,
+                'band' => $request->band,
+                'concert_date' => $request->concertDate,
+                'published_at' => $request->concertDate,
+                'image_url' => $imageUrl,
+                'user_id' => $request->user()->id
+            ]);
+
+            $postImages = $request->file('postImages');
+            
+            foreach($postImages as $postImageFile){
+                $postImageUrl = Storage::put('', $postImageFile);
+                PostImage::create([
+                    'post_id' => $post->id,
+                    'image_url' => $postImageUrl
+                ]);
+            }
+
+            $paragraph = Paragraph::create([
+                'text' => $request->text,
+                'post_id' => $post->id
+            ]);
+
+
+            return($post);
         } catch(Exception $e){
             return($e);
         }
