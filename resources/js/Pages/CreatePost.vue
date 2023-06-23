@@ -1,5 +1,6 @@
 <script setup>
 import Layout from '@/Components/Layout.vue';
+import { Head } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3'
 
 const form = useForm({
@@ -25,6 +26,7 @@ function submit(){
 
 <template>
     <Layout>
+        <Head title="Create Post" />
         <div class="bg-white p-8">
             <p class="font-serif font-bold text-4xl mb-8">Share your experience with a new post!</p>
             <form @submit.prevent="submit">
@@ -74,7 +76,7 @@ function submit(){
                     </label>
                     <input id="postImages" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
                 </div>
-                <div class="mb-4 w-full">
+                <div class="mb-4 w-full flex">
                     <label class="self-start" for="text">Share yourself!</label>
                     <textarea class="ml-4 w-1/2" id="text"  v-model="form.text" rows="20" />
                 </div>
