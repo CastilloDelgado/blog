@@ -78,7 +78,7 @@ function submit(){
                     <label class="self-start" for="text">Share yourself!</label>
                     <textarea class="ml-4 w-1/2" id="text"  v-model="form.text" rows="20" />
                 </div>
-                <button type="submit" class="w-1/3 ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Create Post!</button>
+                <button type="submit" class="w-1/3 cleaml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Create Post!</button>
             </form>
         </div>
     </Layout>
