@@ -41,11 +41,7 @@ Route::get('/posts/create', function(){
 
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
-Route::get('/posts/{post}', function($id){
-    return Inertia::render('Post', [
-        'post' => Post::with(['author', 'tags', 'paragraphs', 'images'])->find($id)
-    ]);
-})->name('posts.show');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

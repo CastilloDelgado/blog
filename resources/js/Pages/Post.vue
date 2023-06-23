@@ -6,9 +6,19 @@
     import { Head } from '@inertiajs/vue3';
     import { Link } from '@inertiajs/vue3'
     import PostMainImage from '@/Components/PostMainImage.vue';
-    
+    import { computed } from '@vue/reactivity';
+
     defineProps({
         post: Object
+    })
+
+    const paragraphs = computed(() => {
+        console.log(post.paragraphs)   
+        if(post.paragraphs[0]){
+            return post.paragraphs
+        } else {
+            return([])
+        }
     })
 </script>
 
@@ -50,8 +60,8 @@
                                 <p class="font-sans">{{ post.address }}</p>
                             </div>
 
-                            <div v-for="paragraph in post.paragraphs" class="text-xl text-justify mb-4">
-                                <p>{{ paragraph.text }}</p>
+                            <div v-for="paragraph in post.paragraphs[0].text.split('\n')" class="text-xl text-justify mb-4">
+                                <p>{{ paragraph }}</p>
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">

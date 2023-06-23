@@ -7,9 +7,22 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Post;
 use App\Models\Paragraph;
 use App\Models\PostImage;
+use Inertia\Inertia;
+
 
 class PostController extends Controller
 {
+    public function show($id){
+        try{
+            $post = Post::with(['author', 'tags', 'paragraphs', 'images'])->find($id);
+            return Inertia::render('Post', [
+                'post' => $post
+            ]);
+        } catch(Exception $e){
+            return($e);
+        }
+    }
+
     public function store(Request $request){
         try {
             $request->validate([
