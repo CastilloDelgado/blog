@@ -27,47 +27,47 @@ function submit(){
 <template>
     <Layout>
         <Head title="Create Post" />
-        <div class="bg-white p-8">
+        <div class="grid place-items-center">
             <p class="font-serif font-bold text-4xl mb-8">Share your experience with a new post!</p>
             <form @submit.prevent="submit">
-                <div class="mb-2 flex">
+                <div class="mb-2 flex w-full">
                     <label class="self-start" for="title">Title</label>
-                    <input class="ml-4" id="title"  type="text" v-model="form.title" />
+                    <input class="ml-4 w-full" id="title"  type="text" v-model="form.title" />
                 </div>
-                <div class="mb-2 flex">
+                <div class="mb-2 flex w-full">
                     <label class="self-start" for="location">Location</label>
-                    <input class="ml-4" id="location"  type="text" v-model="form.location" />
+                    <input class="ml-4 w-full" id="location"  type="text" v-model="form.location" />
                 </div>
-                <div class="mb-2 flex">
+                <div class="mb-2 flex w-full">
                     <label class="self-start" for="address">Address</label>
-                    <input class="ml-4" id="address" type="text"  v-model="form.address" />
+                    <input class="ml-4 w-full" id="address" type="text"  v-model="form.address" />
                 </div>
-                <div class="mb-2 flex">
+                <div class="mb-2 flex w-full">
                     <label class="self-start" for="country">Country</label>
-                    <input class="ml-4" id="country" type="text"  v-model="form.country" />
+                    <input class="ml-4 w-full" id="country" type="text"  v-model="form.country" />
                 </div>
-                <div class="mb-2 flex">
+                <div class="mb-2 flex w-full">
                     <label class="self-start" for="state">State</label>
-                    <input class="ml-4" id="state" type="text"  v-model="form.state" />
+                    <input class="ml-4 w-full" id="state" type="text"  v-model="form.state" />
                 </div>
-                <div class="mb-4 flex">
+                <div class="mb-4 flex w-full">
                     <label class="self-start" for="city">City</label>
-                    <input class="ml-4" id="city" type="text"  v-model="form.city" />
+                    <input class="ml-4 w-full" id="city" type="text"  v-model="form.city" />
                 </div>
                 <div class="mb-6 flex">
                     <label class="self-start" for="image">Main Image</label>
-                    <label for="image" class="ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
+                    <label for="image" class="w-full ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
                         Click here to add image!
                     </label>
                     <input id="image" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
                 </div>
-                <div class="mb-4 flex">
+                <div class="mb-4 flex w-full">
                     <label class="self-start" for="concertDate">Concert Date</label>
-                    <input class="ml-4" id="concertDate" type="date"  v-model="form.concertDate" />
+                    <input class="ml-4 w-full" id="concertDate" type="date"  v-model="form.concertDate" />
                 </div>
-                <div class="mb-4 flex">
+                <div class="mb-4 flex" w-full>
                     <label class="self-start" for="band">Band Name</label>
-                    <input class="ml-4" id="band" type="text"  v-model="form.band" />
+                    <input class="ml-4 w-full" id="band" type="text"  v-model="form.band" />
                 </div>
                 <div class="mb-5 flex">
                     <label class="self-start" for="postImages">Gallery Images</label>
@@ -78,9 +78,9 @@ function submit(){
                 </div>
                 <div class="mb-4 w-full flex">
                     <label class="self-start" for="text">Share yourself!</label>
-                    <textarea class="ml-4 w-1/2" id="text"  v-model="form.text" rows="10" />
+                    <textarea class="ml-4 w-full" id="text"  v-model="form.text" rows="10" />
                 </div>
-                <button type="submit" class="w-1/3 cleaml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Create Post!</button>
+                <button type="submit" class="w-full shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Create Post!</button>
             </form>
         </div>
     </Layout>

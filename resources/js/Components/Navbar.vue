@@ -43,7 +43,7 @@
             </div>
         </div>
          <!-- Dropdown Menu -->
-         <div v-if="menuOpen" class="text-center bg-black text-white md:hidden">
+         <div v-show="menuOpen" class="text-center bg-black text-white md:hidden">
             <Link :href="route('home')">
                 <p class="hover:underline py-2 border-b-2 border-gray">
                     Home
