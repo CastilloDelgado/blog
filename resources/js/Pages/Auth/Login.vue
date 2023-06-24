@@ -33,7 +33,7 @@ const submit = () => {
 <template>
     <Layout>    
         <Head title="Log in" />
-        <div class="h-full grid place-items-center">
+        <div class="h-full grid place-items-center py-24 px-2">
             <div class="p-6">
                 <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
                     {{ status }}
@@ -77,7 +77,7 @@ const submit = () => {
                         </label>
                     </div>
 
-                    <div class="flex items-center justify-end mt-4">
+                    <div class="flex items-center justify-between mt-4">
                         <Link
                             v-if="canResetPassword"
                             :href="route('password.request')"
@@ -86,9 +86,9 @@ const submit = () => {
                             Forgot your password?
                         </Link>
 
-                        <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                        <button :disabled="form.processing" type="submit" class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 py-1 text-sm hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
                             Log in
-                        </PrimaryButton>
+                        </button>
                     </div>
                 </form>
             </div>

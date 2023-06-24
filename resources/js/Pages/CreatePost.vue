@@ -27,9 +27,9 @@ function submit(){
 <template>
     <Layout>
         <Head title="Create Post" />
-        <div class="grid place-items-center">
+        <div class="grid place-items-center py-24 px-2">
             <p class="font-serif font-bold text-4xl mb-8">Share your experience with a new post!</p>
-            <form @submit.prevent="submit">
+            <form @submit.prevent="submit" class="md:w-1/2">
                 <div class="mb-2 flex w-full">
                     <label class="self-start" for="title">Title</label>
                     <input class="ml-4 w-full" id="title"  type="text" v-model="form.title" />
