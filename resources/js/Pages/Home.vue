@@ -17,7 +17,7 @@
     <Layout>
         <Head title="Home" />
         <div class="bg-gray-200">
-            <div class="bg-white container mx-auto py-4">
+            <div class="bg-white container mx-auto ">
                 <!-- Header -->
                 <Header />
                 <!-- Section - The best -->
