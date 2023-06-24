@@ -54,13 +54,6 @@ function submit(){
                     <label class="self-start" for="city">City</label>
                     <input class="ml-4 w-full" id="city" type="text"  v-model="form.city" />
                 </div>
-                <div class="mb-6 flex">
-                    <label class="self-start" for="image">Main Image</label>
-                    <label for="image" class="w-full ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                        Click here to add image!
-                    </label>
-                    <input id="image" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
-                </div>
                 <div class="mb-4 flex w-full">
                     <label class="self-start" for="concertDate">Concert Date</label>
                     <input class="ml-4 w-full" id="concertDate" type="date"  v-model="form.concertDate" />
@@ -68,6 +61,13 @@ function submit(){
                 <div class="mb-4 flex" w-full>
                     <label class="self-start" for="band">Band Name</label>
                     <input class="ml-4 w-full" id="band" type="text"  v-model="form.band" />
+                </div>
+                <div class="mb-6 flex">
+                    <label class="self-start" for="image">Main Image</label>
+                    <label for="image" class="ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
+                        Click here to add image!
+                    </label>
+                    <input id="image" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
                 </div>
                 <div class="mb-5 flex">
                     <label class="self-start" for="postImages">Gallery Images</label>

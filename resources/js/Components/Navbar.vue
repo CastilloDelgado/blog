@@ -27,12 +27,12 @@
                         Home
                     </p>
                 </Link>
-                <Link :href="route('login')">
+                <Link :href="route('login')" v-show="!$page.props.auth.user">
                     <p class="ml-4 hover:underline">
                         Login
                     </p>
                 </Link>
-                <Link :href="route('posts.create')">
+                <Link :href="route('posts.create')" v-show="$page.props.auth.user">
                     <p class="ml-4 hover:underline">
                         Create Post
                     </p>
@@ -44,17 +44,17 @@
         </div>
          <!-- Dropdown Menu -->
          <div v-show="menuOpen" class="text-center bg-black text-white md:hidden">
-            <Link :href="route('home')">
+            <Link :href="route('home')" >
                 <p class="hover:underline py-2 border-b-2 border-gray">
                     Home
                 </p>
             </Link>
-            <Link :href="route('login')">
+            <Link :href="route('login')" v-show="!$page.props.auth.user">
                 <p class="hover:underline py-2 border-b-2 border-gray">
                     Login
                 </p>
             </Link>
-            <Link :href="route('posts.create')">
+            <Link :href="route('posts.create')" v-show="$page.props.auth.user">
                 <p class="hover:underline py-2 border-b-2 border-gray">
                     Create Post
                 </p>
