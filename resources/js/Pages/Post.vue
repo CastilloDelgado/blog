@@ -26,9 +26,9 @@
     <Layout>
         <Head :title="post.title" />
         <div class="bg-gray-200">
-            <div class="bg-white container mx-auto py-4">
+            <div class="bg-white py-24 px-2 container mx-auto py-4">
                 <!-- Post Layout -->
-                <div class="pt-12 px-6 md:px-12 lg:px-32 mb-12">
+                <div class="px-6 md:px-12 lg:px-32 mb-12">
                     <div class="flex mb-6">
                         <div class="hidden lg:flex lg:w-1/5"></div>
                         <div class="w-full lg:w-4/5 lg:pl-12 mb-4 flex justify-between">
