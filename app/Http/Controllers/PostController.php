@@ -45,12 +45,16 @@ class PostController extends Controller
                 'state' => 'required|string|max:255',
                 'city' => 'required|string|max:255',
                 'concertDate' => 'required',
-                'band' => 'required|string|max:255'
+                'band' => 'required|string|max:255',
+                'tags' => 'required|array'
             ]);
 
+
+            // Upload main image file
             $file = $request->file('image');
             $imageUrl = Storage::put('', $file);
 
+            // Create post
             $post = Post::create([
                 'title' => $request->title,
                 'location' => $request->location,
@@ -65,6 +69,7 @@ class PostController extends Controller
                 'user_id' => $request->user()->id
             ]);
 
+            // Upload the rest of the images and attach them to the post
             $postImages = $request->file('postImages');
             
             foreach($postImages as $postImageFile){
@@ -75,11 +80,17 @@ class PostController extends Controller
                 ]);
             }
 
+            // Creating paragraphs and attach them to the post
             $paragraph = Paragraph::create([
                 'text' => $request->text,
                 'post_id' => $post->id
             ]);
 
+            // Attaching tags to the post
+            foreach($request->tags as $tagId){
+                $tag = Tag::find($tagId);
+                $post->tags()->save($tag);
+            }
 
             return($post);
         } catch(Exception $e){
