@@ -26,7 +26,7 @@
     <Layout>
         <Head :title="post.title" />
         <div class="bg-gray-200">
-            <div class="bg-white py-24 px-2 container mx-auto py-4">
+            <div class="bg-white py-24 px-2 container mx-auto">
                 <!-- Post Layout -->
                 <div class="px-6 md:px-12 lg:px-32 mb-12">
                     <div class="flex mb-6">
