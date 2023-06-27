@@ -29,15 +29,15 @@
             <div class="bg-white py-24 px-2 container mx-auto">
                 <!-- Post Layout -->
                 <div class="px-6 md:px-12 lg:px-32 mb-12">
-                    <div class="flex mb-6">
+                    <div class="flex md:mb-6">
                         <div class="hidden lg:flex lg:w-1/5"></div>
-                        <div class="w-full lg:w-4/5 lg:pl-12 mb-4 flex justify-between">
-                            <div>
+                        <div class="w-full lg:w-4/5 lg:pl-12 mb-4  justify-between flex flex-col md:flex-row">
+                            <div class="mb-2">
                                 <Link :href="route('home')">
                                     <p class="font-bold text-sm hover:underline">{{ "< Regresar" }}</p>
                                 </Link>
                             </div>
-                            <div class="flex">
+                            <div class="flex flex-wrap">
                                 <!-- Tag -->
                                 <TagBadge  v-for="tag in post.tags" :tag="tag" />
                             </div>
@@ -56,8 +56,9 @@
                             <div class="mb-4">
                                 <p class="font-serif text-4xl font-bold">{{ post?.title || "No title" }}</p>
                             </div>
-                            <div class="mb-8">
-                                <p class="font-sans">{{ post.address }}</p>
+                            <div class="mb-8 flex">
+                                <p class="font-sans font-bold">{{ post.address }}</p>
+                                <p class="font-sans ml-2">{{  post.concert_date }}</p>
                             </div>
 
                             <div v-for="paragraph in post.paragraphs[0].text.split('\n')" class="text-xl text-justify mb-4">
