@@ -13,6 +13,7 @@ const form = useForm({
     image: null,
     concertDate: null,
     band: null,
+    tags: null,
     postImages: null,
     text: null
 })
@@ -21,6 +22,10 @@ const form = useForm({
 function submit(){
     form.post('/posts')
 }
+
+defineProps({
+    tags: Array
+})
 
 </script>
 
@@ -58,9 +63,17 @@ function submit(){
                     <label class="self-start" for="concertDate">Concert Date</label>
                     <input class="ml-4 w-full" id="concertDate" type="date"  v-model="form.concertDate" />
                 </div>
-                <div class="mb-4 flex" w-full>
+                <div class="mb-4 flex">
                     <label class="self-start" for="band">Band Name</label>
                     <input class="ml-4 w-full" id="band" type="text"  v-model="form.band" />
+                </div>
+                <div class="mb-4 flex">
+                    <label for="tags" class="self-start">Tags</label>
+                    <select class="ml-4 w-full" id="tags" v-model="form.tags" multiple>
+                        <option v-for="tag in tags" :value="tag.id" class="flex w-auto flex-row">
+                            {{ tag.name }}
+                        </option>
+                    </select>
                 </div>
                 <div class="mb-6 flex">
                     <label class="self-start" for="image">Main Image</label>
