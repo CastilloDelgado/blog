@@ -12,6 +12,7 @@
             <div class="p-4 flex justify-center flex-col">
                 <b class="font-serif text-center mb-3">{{ post.title }}</b>
                 <div class="font-sans">
+                    <p class="text-sm mr-1"><b>Banda</b> {{ post.band }}</p>
                     <p class="text-sm mr-1"><b>Lugar</b> {{ post.address }}</p>
                     <p class="text-sm mr-1"><b>Fecha</b> {{ post.concert_date }} </p>
                     <p class="text-sm mr-1"><b>Autor</b> {{ post.author.name }}</p>
