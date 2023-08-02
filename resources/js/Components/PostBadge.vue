@@ -1,5 +1,6 @@
 <script setup>
     import { Link } from '@inertiajs/vue3'
+import BaseDate from './BaseDate.vue';
     defineProps({
         post: Object,
     })
@@ -14,7 +15,10 @@
                 <div class="font-sans">
                     <p class="text-sm mr-1"><b>Banda</b> {{ post.band }}</p>
                     <p class="text-sm mr-1"><b>Lugar</b> {{ post.address }}</p>
-                    <p class="text-sm mr-1"><b>Fecha</b> {{ post.concert_date }} </p>
+                    <div class="text-sm mr-1 flex">
+                        <b class="mr-1">Fecha: </b> 
+                        <BaseDate :timestamp="post.concert_date" />
+                    </div>
                     <p class="text-sm mr-1"><b>Autor</b> {{ post.author.name }}</p>
                 </div>
             </div>

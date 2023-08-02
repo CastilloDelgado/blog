@@ -6,20 +6,12 @@
     import { Head } from '@inertiajs/vue3';
     import { Link } from '@inertiajs/vue3'
     import PostMainImage from '@/Components/PostMainImage.vue';
-    import { computed } from '@vue/reactivity';
+import BaseDate from '@/Components/BaseDate.vue';
 
     defineProps({
         post: Object
     })
 
-    const paragraphs = computed(() => {
-        console.log(post.paragraphs)   
-        if(post.paragraphs[0]){
-            return post.paragraphs
-        } else {
-            return([])
-        }
-    })
 </script>
 
 <template>
@@ -57,8 +49,8 @@
                                 <p class="font-serif text-4xl font-bold">{{ post?.title || "No title" }}</p>
                             </div>
                             <div class="mb-8 flex">
-                                <p class="font-sans font-bold">{{ post.address }}</p>
-                                <p class="font-sans ml-2">{{  post.concert_date }}</p>
+                                <p class="font-sans font-bold mr-2">{{ post.address }}</p>
+                                <BaseDate :timestamp="post.concert_date " />
                             </div>
 
                             <div v-for="paragraph in post.paragraphs[0].text.split('\n')" class="text-xl text-justify mb-4">
