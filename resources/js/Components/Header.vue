@@ -1,5 +1,13 @@
 <script setup>
     import HeaderFilters from './HeaderFilters.vue';
+
+    defineProps({
+        tags: {
+            type: Array,
+            required: true,
+            default: []
+        }
+    })
 </script>
 
 <template>
@@ -15,6 +23,6 @@
                 </p>
             </div>
         </div>
-        <HeaderFilters />
+        <HeaderFilters :tags="tags"  />
     </section>
 </template>

@@ -6,6 +6,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Models\Post;
+use App\Models\Tag;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,8 @@ Route::get('/', function(){
     return Inertia::render('Home', [
         'bestPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
         'randomPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
-        'latestPosts' => Post::with('author')->latest()->take(4)->get()
+        'latestPosts' => Post::with('author')->latest()->take(4)->get(),
+        'tags' => Tag::all()
     ]);
 })->name('home');
 

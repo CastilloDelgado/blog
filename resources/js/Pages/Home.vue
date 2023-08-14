@@ -10,6 +10,10 @@
         bestPosts: Array,
         randomPosts: Array,
         latestPosts: Array,
+        tags: {
+            type: Array,
+            required: true
+        }
     })
 </script>
 
@@ -19,7 +23,7 @@
         <div class="bg-gray-200">
             <div class="bg-white py-24 px-2 container mx-auto">
                 <!-- Header -->
-                <Header />
+                <Header :tags="tags" />
                 <!-- Section - The best -->
                 <section class="px-12 pb-12">
                     <div class="mb-4 pb-2 border-b-2 border-black" >
