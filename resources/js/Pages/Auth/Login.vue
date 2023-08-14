@@ -33,12 +33,15 @@ const submit = () => {
 <template>
     <Layout>    
         <Head title="Log in" />
-        <div class="h-full grid place-items-center py-24 px-2">
+        <div class="h-[90vh] grid place-items-center py-24 px-2">
             <div class="p-6">
                 <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
                     {{ status }}
                 </div >
                 <form @submit.prevent="submit">
+                    <div class="text-4xl text-center font-bold font-serif mb-4">
+                        Iniciar Sesión
+                    </div>
                     <div>
                         <InputLabel for="email" value="Email" />
 
@@ -87,7 +90,7 @@ const submit = () => {
                         </Link>
 
                         <button :disabled="form.processing" type="submit" class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 py-1 text-sm hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                            Log in
+                            Iniciar Sesión
                         </button>
                     </div>
                 </form>
