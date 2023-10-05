@@ -43,9 +43,7 @@ class DatabaseSeeder extends Seeder
             for($images = 0; $images < 8; $images++){
                 $postImage = PostImage::factory()->create();
                 $post->images()->save($postImage);
-            }
-
-            
+            }   
         }
     }
 }

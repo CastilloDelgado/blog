@@ -30,7 +30,6 @@ const submit = () => {
                     </div>
                     <div>
                         <InputLabel for="name" value="Name" />
-
                         <TextInput
                             id="name"
                             type="text"
