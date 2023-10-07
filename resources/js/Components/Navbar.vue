@@ -11,12 +11,12 @@
 
 <template>
     <nav class="bg-white fixed top-0 left-0 right-0 z-50">
-        <div class="flex justify-between px-6 py-4 border-b-4 border-black">
+        <div class="flex justify-between p-4 border-b-4 border-black">
             <div>
                 <Link :href="route('home')">
                     <p class="flex">
-                        <p class="font-serif font-bold text-2xl md:text-3xl">Life & Live Music</p>
-                        <p class="font-sans ml-2 text-xs md:text-lg">[blog]</p>
+                        <p class="font-serif font-bold text-2xl md:text-3xl w-60 sm:w-fit">Life & Live Music</p>
+                        <p class="font-sans ml-0 sm:ml-2 text-xs md:text-lg">[blog]</p>
                     </p>
                 </Link>
             </div>
@@ -38,7 +38,7 @@
                     </p>
                 </Link>
             </div>
-            <div class="items-center md:hidden ">
+            <div class="items-center md:hidden flex items-center ">
                 <button v-on:click="changeMenuOpen" type="submit" class="cleaml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 py-1 text-sm hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Menu</button>
             </div>
         </div>
