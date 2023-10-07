@@ -15,8 +15,8 @@
             <div>
                 <Link :href="route('home')">
                     <p class="flex">
-                        <p class="font-serif font-bold text-xl md:text-3xl">Life & Live Music</p>
-                        <p class="font-sans ml-2">[blog]</p>
+                        <p class="font-serif font-bold text-2xl md:text-3xl">Life & Live Music</p>
+                        <p class="font-sans ml-2 text-xs md:text-lg">[blog]</p>
                     </p>
                 </Link>
             </div>
