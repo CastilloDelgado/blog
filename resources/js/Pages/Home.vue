@@ -21,7 +21,7 @@
     <Layout>
         <Head title="Home" />
         <div class="bg-gray-200">
-            <div class="bg-white py-24 px-2 md:px-0 container mx-auto">
+            <div class="bg-white py-4 px-2 md:px-0 container mx-auto">
                 <!-- Header -->
                 <Header :tags="tags" />
                 <!-- Section - The best -->

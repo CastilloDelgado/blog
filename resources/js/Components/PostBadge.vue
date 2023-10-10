@@ -19,7 +19,7 @@ import BaseDate from './BaseDate.vue';
                         <b class="mr-1">Fecha: </b> 
                         <BaseDate :timestamp="post.concert_date" />
                     </div>
-                    <p class="text-sm mr-1"><b>Autor</b> {{ post.author.name }}</p>
+                    <p class="text-sm mr-1"><b>Autor</b> {{ post?.author?.name || 'Unknown' }}</p>
                 </div>
             </div>
         </Link>

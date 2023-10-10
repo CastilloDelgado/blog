@@ -1,5 +1,6 @@
 <script setup>
 import Layout from '@/Components/Layout.vue';
+import PostBadge from '@/Components/PostBadge.vue';
 
 defineProps({
     posts: {
