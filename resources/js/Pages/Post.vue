@@ -18,7 +18,7 @@ import BaseDate from '@/Components/BaseDate.vue';
     <Layout>
         <Head :title="post.title" />
         <div class="bg-gray-200">
-            <div class="bg-white py-24 px-2 container mx-auto">
+            <div class="bg-white px-2 container mx-auto">
                 <!-- Post Layout -->
                 <div class="px-6 md:px-12 lg:px-32 mb-12">
                     <div class="flex md:mb-6">
