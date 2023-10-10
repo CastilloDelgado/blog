@@ -43,6 +43,13 @@ Route::get('/posts/create', [PostController::class, 'create'])->name('posts.crea
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
+// TAGS
+Route::get('tags/{tag}', function(Tag $tag){
+    return Inertia::render('AllPosts', [
+        'posts' => $tag->posts
+    ]);
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
