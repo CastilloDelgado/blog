@@ -44,7 +44,7 @@ Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
 // TAGS
-Route::get('tags/{tag}', function(Tag $tag){
+Route::get('tags/{tag:name}', function(Tag $tag){
     return Inertia::render('AllPosts', [
         'posts' => $tag->posts
     ]);
