@@ -30,9 +30,9 @@ use App\Models\Tag;
 
 Route::get('/', function(){
     return Inertia::render('Home', [
-        'bestPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
-        'randomPosts' => Post::with('author')->inRandomOrder()->take(4)->get(),
-        'latestPosts' => Post::with('author')->latest()->take(4)->get(),
+        'bestPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
+        'randomPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
+        'latestPosts' => Post::with('tags', 'author')->latest()->take(4)->get(),
         'tags' => Tag::all()
     ]);
 })->name('home');

@@ -1,5 +1,6 @@
 <script setup>
-    import { Link } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
+import TagBadge from './TagBadge.vue';
 import BaseDate from './BaseDate.vue';
     defineProps({
         post: Object,
@@ -20,6 +21,10 @@ import BaseDate from './BaseDate.vue';
                         <BaseDate :timestamp="post.concert_date" />
                     </div>
                     <p class="text-sm mr-1"><b>Autor</b> {{ post?.author?.name || 'Unknown' }}</p>
+                </div>
+                <!-- Tags -->
+                <div class="flex flex-wrap justify-left mt-4">
+                    <TagBadge class="w-fit text-xs" v-for="tag in post.tags" :tag="tag" :key="tag.id"/>
                 </div>
             </div>
         </Link>
