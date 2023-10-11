@@ -7,8 +7,8 @@ import Navbar from './Navbar.vue';
 
 <template>
     <Navbar />
-        <div class="bg-neutral-200 h-full pt-12">
-            <div class="bg-white py-16 px-2 md:px-0 container mx-auto">
+        <div class="bg-neutral-200 h-full">
+            <div class="bg-white py-32 px-2 md:px-0 container mx-auto">
                 <slot />    
             </div>
         </div>
