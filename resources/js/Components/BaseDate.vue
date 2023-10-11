@@ -1,27 +1,26 @@
-<template>
-    <p :title="dateForHumans(timestamp)">
-        {{ diffForHumans(timestamp) }}
-    </p>
-</template>
-
 <script setup>
 import dayjs from 'dayjs';
 import relativeTime from "dayjs/plugin/relativeTime"
 import localizeDate from "dayjs/plugin/localizedFormat"
+import { ref } from 'vue';
 
 dayjs.extend(relativeTime)
 dayjs.extend(localizeDate)
 
-defineProps({
+const props = defineProps({
     timestamp: {
-        type: Number,
+        type: String,
         required: true
     }
 })
 
-const dateInMiliseconds = (date) =>  new Date(date).getMilliseconds()
-
-const diffForHumans = (timestamp) => dayjs.unix(dateInMiliseconds(timestamp)).fromNow()
-const dateForHumans = (timestamp) => dayjs.unix(dateInMiliseconds(timestamp)).format('llll')
+const dateToShow = ref(dayjs(props.timestamp).fromNow())
+const longDate = ref(dayjs(props.timestamp).format('llll'))
 
 </script>
+
+<template>
+    <p :title="longDate">
+        {{ dateToShow }}
+    </p>
+</template>

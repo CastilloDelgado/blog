@@ -16,6 +16,7 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        $randomDate = fake()->dateTimeBetween('-2 week');
         return [
             'title' => fake()->sentence('6'),
             'location' => fake()->sentence('6'),
@@ -24,9 +25,9 @@ class PostFactory extends Factory
             'state' => fake()->state(),
             'city' => fake()->city(),
             'image_url' => '../../images/concert-1.jpeg',
-            'concert_date' => fake()->date(),
+            'concert_date' => $randomDate,
             'user_id' => 1 ,
-            'published_at' => fake()->date(),
+            'published_at' => $randomDate,
             'band' => fake()->sentence('3')
         ];
     }

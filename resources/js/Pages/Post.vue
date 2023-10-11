@@ -9,7 +9,10 @@
 import BaseDate from '@/Components/BaseDate.vue';
 
     defineProps({
-        post: Object
+        post: {
+            type: Object,
+            required: true
+        }
     })
 
 </script>
