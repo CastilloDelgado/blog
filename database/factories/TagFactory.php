@@ -16,8 +16,10 @@ class TagFactory extends Factory
      */
     public function definition(): array
     {
+        $randomWord = fake()->word();
         return [
-            'name' => fake()->word()
+            'name' => $randomWord,
+            'slug' => $randomWord
         ];
     }
 }
