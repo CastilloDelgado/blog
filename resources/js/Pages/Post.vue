@@ -66,8 +66,6 @@ import BaseDate from '@/Components/BaseDate.vue';
                         </div>
                     </div>
                 </div>
-                
-                <Banner1 />
             </div>
         </div>
     </Layout>
