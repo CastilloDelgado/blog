@@ -16,14 +16,14 @@ class Post extends Model
 
     protected $guarded = [];
 
-    protected function imageUrl(): Attribute
-    {
-        return Attribute::make(
-            get: fn (string $value) => Storage::temporaryUrl(
-                $value, now()->addMinutes(5)
-            )
-        );
-    }
+    // protected function imageUrl(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn (string $value) => Storage::temporaryUrl(
+    //             $value, now()->addMinutes(5)
+    //         )
+    //     );
+    // }
 
     public function tags(): BelongsToMany
     {
