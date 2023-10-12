@@ -11,7 +11,7 @@
 </script>
 
 <template>
-    <section class="flex justify-center flex-col px-2 py-8">
+    <section class="flex justify-center flex-col px-2 pb-6">
         <div class="flex justify-center mb-8">
             <p class="font-serif font-bold text-4xl md:text-5xl">Life & Live Music</p>
             <p class="font-sans ml-2 text-xl md:text-2xl">[blog]</p>

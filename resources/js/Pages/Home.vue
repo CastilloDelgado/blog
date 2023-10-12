@@ -5,8 +5,10 @@
     import Header from '@/Components/Header.vue';
     import Banner1 from '@/Components/Banner1.vue';
     import Banner2 from '@/Components/Banner2.vue';
+import HighlightsSection from '@/Components/HighlightsSection.vue';
 
     defineProps({
+        highlightPosts: Array,
         bestPosts: Array,
         randomPosts: Array,
         latestPosts: Array,
@@ -24,6 +26,8 @@
             <div class="bg-white py-4 px-2 md:px-0 container mx-auto">
                 <!-- Header -->
                 <Header :tags="tags" />
+                <!-- Highlights Section -->
+                <HighlightsSection :posts="highlightPosts" />
                 <!-- Section - The best -->
                 <section class="px-12 pb-12">
                     <div class="mb-4 pb-2 border-b-2 border-black" >
