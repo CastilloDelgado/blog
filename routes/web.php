@@ -29,12 +29,15 @@ use App\Models\Tag;
 // });
 
 Route::get('/', function(){
+    // return Inertia::render('Home', [
+    //     'highlightPosts' => Post::with('tags', 'author')->inRandomOrder()->take(7)->get(),
+    //     'bestPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
+    //     'randomPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
+    //     'latestPosts' => Post::with('tags', 'author')->latest()->take(4)->get(),
+    //     'tags' => Tag::all()
+    // ]);
     return Inertia::render('Home', [
-        'highlightPosts' => Post::with('tags', 'author')->inRandomOrder()->take(7)->get(),
-        'bestPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
-        'randomPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
-        'latestPosts' => Post::with('tags', 'author')->latest()->take(4)->get(),
-        'tags' => Tag::all()
+        'latestPosts' => Post::with('tags', 'author')->latest()->take(3)->get()
     ]);
 })->name('home');
 
