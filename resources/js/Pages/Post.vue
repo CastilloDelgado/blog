@@ -42,7 +42,7 @@ defineProps({
                     <div class="flex flex-col lg:flex-row ">
                         <div class="lg:w-1/5 mb-8 flex flex-row lg:flex-col w-full">
                             <div class="w-1/2 lg:w-full">
-                                <PostMainImage :image_url="post.image_url" />
+                                <PostMainImage :image_url="post.image_url"  />
                             </div>
                             <div class="w-1/2 lg:w-full pl-6  lg:pl-0 self-end lg:self-top">
                                 <PostProfileBadge :published_at="post.published_at"  :author="post.author"/>

@@ -37,7 +37,7 @@ class PostController extends Controller
 
     public function store(Request $request){
         try {
-            $request->validate([
+            $attributes = $request->validate([
                 'title' => 'required|string|max:255',
                 'location' => 'required|string|max:255',
                 'address' => 'required|string|max:255',
@@ -49,31 +49,20 @@ class PostController extends Controller
                 'tags' => 'required|array'
             ]);
 
+            $attributes['user_id'] =  $request->user()->id;
+            $attributes['published_at'] = $request->concertDate;
 
             // Upload main image file
-            $file = $request->file('image');
-            $imageUrl = Storage::put('', $file);
+            $attributes['image_url'] = $request->file('image')->store('images');
 
             // Create post
-            $post = Post::create([
-                'title' => $request->title,
-                'location' => $request->location,
-                'address' => $request->address,
-                'country' => $request->country,
-                'state' => $request->state,
-                'city' => $request->city,
-                'band' => $request->band,
-                'concert_date' => $request->concertDate,
-                'published_at' => $request->concertDate,
-                'image_url' => $imageUrl,
-                'user_id' => $request->user()->id
-            ]);
+            $post = Post::create($attributes);
 
             // Upload the rest of the images and attach them to the post
             $postImages = $request->file('postImages');
             
             foreach($postImages as $postImageFile){
-                $postImageUrl = Storage::put('', $postImageFile);
+                $postImageUrl = $postImageFile->store('images');
                 PostImage::create([
                     'post_id' => $post->id,
                     'image_url' => $postImageUrl
