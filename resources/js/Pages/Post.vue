@@ -1,20 +1,21 @@
 <script setup>
-    import Layout from '@/Components/Layout.vue';
-    import TagBadge from '@/Components/TagBadge.vue';
-    import PostProfileBadge from '@/Components/PostProfileBadge.vue';
-    import Banner1 from '@/Components/Banner1.vue';
-    import { Head } from '@inertiajs/vue3';
-    import { Link } from '@inertiajs/vue3'
-    import PostMainImage from '@/Components/PostMainImage.vue';
+import Layout from '@/Components/Layout.vue';
+import TagBadge from '@/Components/TagBadge.vue';
+import PostProfileBadge from '@/Components/PostProfileBadge.vue';
+import Banner1 from '@/Components/Banner1.vue';
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
+import { Head } from '@inertiajs/vue3';
+import { Link } from '@inertiajs/vue3'
+import PostMainImage from '@/Components/PostMainImage.vue';
 import BaseDate from '@/Components/BaseDate.vue';
 
-    defineProps({
-        post: {
-            type: Object,
-            required: true
-        }
-    })
-
+defineProps({
+    post: {
+        type: Object,
+        required: true
+    }
+})
 </script>
 
 <template>
@@ -56,13 +57,24 @@ import BaseDate from '@/Components/BaseDate.vue';
                                 <BaseDate :timestamp="post.concert_date " />
                             </div>
 
-                            <div v-for="paragraph in post.paragraphs[0].text.split('\n')" class="text-xl text-justify mb-4">
+                            <div v-for="paragraph in post.paragraphs[0].text.split('\n')" class="text-xl text-justify mb-8">
                                 <p>{{ paragraph }}</p>
                             </div>
 
+                            <div class="w-full flex justify-center bg-gray-200 mt-4"> 
+                                <!-- Image Carousel (Create component when working) -->
+                                <Splide :options="{ rewind: true }" aria-label="Concert images" class="w-full md:w-80 ">
+                                    <SplideSlide v-for="image in post.images">
+                                        <img :src="image.image_url" alt="Sample 1">
+                                    </SplideSlide>
+                                </Splide>
+                            </div>
+
+                            <!-- 
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
                                 <img v-for="image in post.images" v-bind:src="image.image_url" alt="" class="border-2 border-black">
                             </div>
+                            -->
                         </div>
                     </div>
                 </div>
