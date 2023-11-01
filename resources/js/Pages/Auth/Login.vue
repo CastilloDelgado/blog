@@ -31,17 +31,17 @@ const submit = () => {
 <template>
     <Layout>    
         <Head title="Log in" />
-        <div class="h-[90vh] grid place-items-center py-24 px-2">
+        <div class="h-[90vh] grid place-items-center py-24 px-2 bg-primary-50">
             <div class="p-6">
                 <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
                     {{ status }}
                 </div >
                 <form @submit.prevent="submit">
-                    <div class="text-4xl text-center font-bold font-serif mb-4">
+                    <div class="text-4xl text-center text-primary-800 font-bold  mb-4">
                         Iniciar Sesión
                     </div>
                     <div>
-                        <InputLabel for="email" value="Email" />
+                        <InputLabel for="email" value="Correo Electrónico" />
 
                         <TextInput
                             id="email"
@@ -51,13 +51,14 @@ const submit = () => {
                             required
                             autofocus
                             autocomplete="username"
+                            placeholder="Correo Electrónico"
                         />
 
                         <InputError class="mt-2" :message="form.errors.email" />
                     </div>
 
                     <div class="mt-4">
-                        <InputLabel for="password" value="Password" />
+                        <InputLabel for="password" value="Contraseña" />
 
                         <TextInput
                             id="password"
@@ -66,6 +67,7 @@ const submit = () => {
                             v-model="form.password"
                             required
                             autocomplete="current-password"
+                            placeholder="Contraseña"
                         />
 
                         <InputError class="mt-2" :message="form.errors.password" />
@@ -74,7 +76,7 @@ const submit = () => {
                     <div class="block mt-4">
                         <label class="flex items-center">
                             <Checkbox name="remember" v-model:checked="form.remember" />
-                            <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                            <span class="ml-2 text-sm text-primary-600">Guardar sesión</span>
                         </label>
                     </div>
 
@@ -84,7 +86,7 @@ const submit = () => {
                             :href="route('password.request')"
                             class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                            Forgot your password?
+                            Recuperar contraseña
                         </Link>
 
                         <button :disabled="form.processing" type="submit" class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 py-1 text-sm hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">

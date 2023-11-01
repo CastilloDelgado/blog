@@ -29,7 +29,7 @@ defineProps({
                         <div class="w-full lg:w-4/5 lg:pl-12 mb-4  justify-between flex flex-col md:flex-row">
                             <div class="mb-2">
                                 <Link :href="route('home')">
-                                    <p class="font-bold text-sm hover:underline">{{ "< Regresar" }}</p>
+                                    <p class="font-bold text-sm border-b border-b-white  hover:border-black">{{ "< Regresar" }}</p>
                                 </Link>
                             </div>
                             <div class="flex flex-wrap">
@@ -52,7 +52,7 @@ defineProps({
                                 <p class="font-serif text-4xl font-bold">{{ post?.title || "No title" }}</p>
                             </div>
                             <div class="mb-8 flex">
-                                <p class="font-sans font-bold mr-2">{{ post.address }}</p>
+                                <p class="font-sans mr-2">{{ post.author.name }}, </p>
                                 <BaseDate :timestamp="post.concert_date " />
                             </div>
 
