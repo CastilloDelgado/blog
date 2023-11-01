@@ -49,23 +49,24 @@ defineProps({
         <Head title="Inicio" />
         <!-- Header -->
         <MainMessage />
-
-        <PostsSection :posts="latestPosts"/>
-
+        
+        
         <CompanyInfo
-            title="YU - KAL"
-            description="Es la fusión de nuestros nombres, nuestra amistad, el compartir cosas en común y sobre todo el llamado al servicio hacia los demás. Este proyecto nace desde el amor de transmitir nuestras experiencias del camino espiritual que ambas hemos transitado y el aprendizaje que hemos adquirido a través del tiempo nos es grato compartirlo."
-            :images="[
-                carouselImage1,
-                carouselImage2,
-                carouselImage3,
-                carouselImage4,
-                carouselImage5,
-                carouselImage6,
-                carouselImage7,
-                carouselImage8,
-            ]"
+        title="YU - KAL"
+        description="Es la fusión de nuestros nombres, nuestra amistad, el compartir cosas en común y sobre todo el llamado al servicio hacia los demás. Este proyecto nace desde el amor de transmitir nuestras experiencias del camino espiritual que ambas hemos transitado y el aprendizaje que hemos adquirido a través del tiempo nos es grato compartirlo."
+        :images="[
+            carouselImage1,
+            carouselImage2,
+            carouselImage3,
+            carouselImage4,
+            carouselImage5,
+            carouselImage6,
+            carouselImage7,
+            carouselImage8,
+        ]"
         />
+        
+        <PostsSection :posts="latestPosts"/>
 
         <VideoPresentation :video="video" />
 

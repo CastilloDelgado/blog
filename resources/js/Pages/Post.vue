@@ -1,14 +1,14 @@
 <script setup>
-import Layout from '@/Components/Layout.vue';
-import TagBadge from '@/Components/TagBadge.vue';
-import PostProfileBadge from '@/Components/PostProfileBadge.vue';
-import Banner1 from '@/Components/Banner1.vue';
+import Layout from '@/BaseComponents/Layout.vue';
+import TagBadge from '@/CustomComponents/TagBadge.vue';
+import PostProfileBadge from '@/CustomComponents/PostProfileBadge.vue';
+import Banner1 from '@/CustomComponents/Banner1.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 import { Head } from '@inertiajs/vue3';
 import { Link } from '@inertiajs/vue3'
 import PostMainImage from '@/Components/PostMainImage.vue';
-import BaseDate from '@/Components/BaseDate.vue';
+import BaseDate from '@/CustomComponents/BaseDate.vue';
 
 defineProps({
     post: {

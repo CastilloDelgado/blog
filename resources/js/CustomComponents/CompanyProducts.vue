@@ -1,18 +1,9 @@
 <script setup>
 import { ref } from 'vue';
 import ProductBadge from './ProductBadge.vue';
+import { BACKGROUND_COLORS} from "@/constants"
 
-const backgroundColors = ref([
-    'bg-primary-100',
-    'bg-primary-200',
-    'bg-primary-300',
-    'bg-primary-400',
-    'bg-primary-500',
-    'bg-primary-600',
-    'bg-primary-700',
-    'bg-primary-800',
-    'bg-primary-900',
-])
+const backgroundColors = ref(BACKGROUND_COLORS)
 
 defineProps({
     title: {
