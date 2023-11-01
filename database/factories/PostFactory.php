@@ -19,16 +19,19 @@ class PostFactory extends Factory
         $randomDate = fake()->dateTimeBetween('-2 week');
         return [
             'title' => fake()->sentence('6'),
-            'location' => fake()->sentence('6'),
-            'address' => fake()->sentence('6'),
-            'country' => fake()->country(), 
-            'state' => fake()->state(),
-            'city' => fake()->city(),
             'image_url' => '../../images/concert-1.jpeg',
-            'concert_date' => $randomDate,
-            'user_id' => 1 ,
+            'slug' => fake()->sentence(3),
+            'excerpt' => fake()->sentence(16),
+            'body' => fake()->paragraph(10),
             'published_at' => $randomDate,
-            'band' => fake()->sentence('3')
+            'user_id' => 1
+            // 'location' => fake()->sentence('6'),
+            // 'address' => fake()->sentence('6'),
+            // 'country' => fake()->country(), 
+            // 'state' => fake()->state(),
+            // 'city' => fake()->city(),
+            // 'concert_date' => $randomDate,
+            // 'band' => fake()->sentence('3')
         ];
     }
 }

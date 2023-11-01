@@ -1,5 +1,5 @@
 <script setup>
-import Layout from '@/Components/Layout.vue';
+import Layout from '@/BaseComponents/Layout.vue';
 import { Head } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3'
 

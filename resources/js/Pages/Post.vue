@@ -2,12 +2,11 @@
 import Layout from '@/BaseComponents/Layout.vue';
 import TagBadge from '@/CustomComponents/TagBadge.vue';
 import PostProfileBadge from '@/CustomComponents/PostProfileBadge.vue';
-import Banner1 from '@/CustomComponents/Banner1.vue';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
 import { Head } from '@inertiajs/vue3';
 import { Link } from '@inertiajs/vue3'
-import PostMainImage from '@/Components/PostMainImage.vue';
+import PostMainImage from '@/CustomComponents/PostMainImage.vue';
 import BaseDate from '@/CustomComponents/BaseDate.vue';
 
 defineProps({
@@ -21,10 +20,10 @@ defineProps({
 <template>
     <Layout>
         <Head :title="post.title" />
-        <div class="bg-gray-200">
+        <div class="bg-white pt-24 pb-8">
             <div class="bg-white px-2 md:px-0 container mx-auto">
                 <!-- Post Layout -->
-                <div class="px-6 md:px-12 lg:px-32 mb-12">
+                <div class="px-6 md:px-12 lg:px-32 ">
                     <div class="flex md:mb-6">
                         <div class="hidden lg:flex lg:w-1/5"></div>
                         <div class="w-full lg:w-4/5 lg:pl-12 mb-4  justify-between flex flex-col md:flex-row">

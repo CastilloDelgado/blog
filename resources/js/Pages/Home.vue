@@ -85,7 +85,7 @@ defineProps({
                     id: 2,
                     title: 'Despertar espiritual',
                     description:
-                        'Tú puedes estar muerte o con experiencia de medicina sagrada, en despierto en consciencia y no en espíritu o al un parto, cuando te rompen el corazón, esto alude revés, esto es la densidad de la dualidad y se tiene al chacra corazón porque te contraes o te expandes que estar en balance.',
+                        'Tú puedes estar muerte o con experiencia de medicina sagrada, en despierto en consciencia y no en espíritu o al un parto, cuando te rompen el corazón.',
                     image: productsImage2,
                 },
                 {

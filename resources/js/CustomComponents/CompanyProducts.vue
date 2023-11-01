@@ -1,9 +1,6 @@
 <script setup>
-import { ref } from 'vue';
-import ProductBadge from './ProductBadge.vue';
-import { BACKGROUND_COLORS} from "@/constants"
 
-const backgroundColors = ref(BACKGROUND_COLORS)
+import ProductBadge from './ProductBadge.vue';
 
 defineProps({
     title: {
@@ -31,7 +28,7 @@ defineProps({
                     <p class="text-primary-800 px-8 text-justify text-lg md:px-36 lg:px-64">{{ description }}</p>
                 </div>
                 <div class="flex flex-wrap w-full justify-center gap-6">
-                    <ProductBadge v-for="(product, index) in products" :class="[backgroundColors[index + 1]]" :key="product.id" :product="product"/>
+                    <ProductBadge v-for="(product, index) in products" class="bg-primary-200" :key="product.id" :product="product"/>
                 </div>
             </div>
         </div>

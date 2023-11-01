@@ -37,7 +37,7 @@ class PostController extends Controller
 
     public function store(Request $request){
         try {
-            $attributes = $request->validate([
+            $request->validate([
                 'title' => 'required|string|max:255',
                 'location' => 'required|string|max:255',
                 'address' => 'required|string|max:255',
@@ -48,6 +48,17 @@ class PostController extends Controller
                 'band' => 'required|string|max:255',
                 'tags' => 'required|array'
             ]);
+
+            $attributes = [
+                'title' => $request["title"],
+                'location' => $request["location"],
+                'address' => $request["address"],
+                'country' => $request["country"],
+                'state' => $request["state"],
+                'city' => $request["city"],
+                'concert_date' => $request["concertDate"],
+                'band'=> $request["band"],
+            ];
 
             $attributes['user_id'] =  $request->user()->id;
             $attributes['published_at'] = $request->concertDate;

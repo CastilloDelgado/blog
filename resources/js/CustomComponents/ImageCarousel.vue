@@ -14,7 +14,7 @@ defineProps({
 <template>
     <Splide  :options="{ rewind: true }" aria-label="My Favorite Images">
         <SplideSlide  v-for="image in images" >
-            <img :src="image" class="object-cover" alt="Sample 1">
+            <img :src="image" class="object-cover w-full h-full" alt="Sample 1">
         </SplideSlide>
     </Splide>
 </template>
