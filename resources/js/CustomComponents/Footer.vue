@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { Link } from '@inertiajs/vue3';
 import { SOCIAL_MEDIA_LINKS } from "@/constants"
 
 const links = ref(SOCIAL_MEDIA_LINKS)
@@ -38,6 +39,9 @@ const links = ref(SOCIAL_MEDIA_LINKS)
             <div class="flex text-right">
                 <p class="mr-1">Yukal</p>
                 <p>Rediseñando el camino</p>
+                <Link href="/login">
+                    <p class="ml-2 text-primary-200 hover:border-b hover:border-primary-200">Iniciar Sesión</p>
+                </Link>
             </div>
         </div>
     </div>

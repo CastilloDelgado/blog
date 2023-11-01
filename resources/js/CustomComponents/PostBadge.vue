@@ -4,6 +4,7 @@ import BaseDate from './BaseDate.vue';
 import CustomButton from './CustomButton.vue';
 import { ref } from 'vue';
 import { BACKGROUND_COLORS} from "@/constants"
+import TagBadge from './TagBadge.vue';
 
 const backgroundColors = ref(BACKGROUND_COLORS)
 
@@ -28,13 +29,13 @@ defineProps({
                         <p class="mr-1"><b>Autor:</b> {{ post?.author?.name || 'Unknown' }}</p>
                     </div>
                     <!-- Tags -->
-                    <!-- <div class="flex flex-wrap justify-left mt-4">
+                    <div class="flex flex-wrap justify-left mt-4">
                         <TagBadge class="w-fit text-xs" v-for="tag in post.tags" :tag="tag" :key="tag.id"/>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="w-auto flex justify-center m-4">
-                <CustomButton title="Continuar leyendo..." class="w-full text-xs bg-primary-600 hover:bg-primary-800 text-primary-100 hover:scale-[100%]" />
+                <CustomButton title="Continuar leyendo..." class="w-full bg-primary-600 hover:bg-primary-800 text-primary-100 hover:scale-[100%]" />
             </div>
         </div>
     </Link>
