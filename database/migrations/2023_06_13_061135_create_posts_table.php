@@ -17,17 +17,10 @@ return new class extends Migration
             $table->string('image_url');
             $table->unsignedBigInteger('user_id');
             $table->string('slug');
+            $table->string('video')->default('');
             $table->string('excerpt');
             $table->longText('body');
-            $table->timestamp('published_at')->nullable;
             $table->timestamps();
-            // $table->string('location');
-            // $table->string('address');
-            // $table->string('country');
-            // $table->string('state');
-            // $table->string('city');
-            // $table->timestamp('concert_date');
-            // $table->string('band');
         });
     }
 

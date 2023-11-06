@@ -11,14 +11,7 @@ export const NAVBAR_OPTIONS = [
         id: 2,
         title: "Nuestro Blog",
         alt: "blog",
-        link: "/",
-        selected: false
-    },
-    {
-        id: 3,
-        title: "Servicios",
-        alt: "inicio",
-        link: "/",
+        link: "/posts",
         selected: false
     },
 ]

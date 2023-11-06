@@ -21,17 +21,11 @@ class PostFactory extends Factory
             'title' => fake()->sentence('6'),
             'image_url' => '../../images/concert-1.jpeg',
             'slug' => fake()->sentence(3),
-            'excerpt' => fake()->sentence(16),
+            'excerpt' => fake()->paragraph(1),
             'body' => fake()->paragraph(10),
-            'published_at' => $randomDate,
-            'user_id' => 1
-            // 'location' => fake()->sentence('6'),
-            // 'address' => fake()->sentence('6'),
-            // 'country' => fake()->country(), 
-            // 'state' => fake()->state(),
-            // 'city' => fake()->city(),
-            // 'concert_date' => $randomDate,
-            // 'band' => fake()->sentence('3')
+            'user_id' => 1,
+            'video' => "https://www.youtube.com/embed/0TgwPfgTgZw?si=PX1Djgmieu_-FXQ_"
         ];
     }
 }
+

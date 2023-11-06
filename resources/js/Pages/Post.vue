@@ -29,7 +29,7 @@ defineProps({
                         <div class="w-full lg:w-4/5 lg:pl-12 mb-4  justify-between flex flex-col md:flex-row">
                             <div class="mb-2">
                                 <Link :href="route('home')">
-                                    <p class="font-bold text-sm border-b border-b-white  hover:border-black">{{ "< Regresar" }}</p>
+                                    <p class="font-bold text-sm border-b border-b-transparent hover:border-black">{{ "< Regresar" }}</p>
                                 </Link>
                             </div>
                             <div class="flex flex-wrap">
@@ -56,24 +56,24 @@ defineProps({
                                 <BaseDate :timestamp="post.concert_date " />
                             </div>
 
-                            <div v-for="paragraph in post.paragraphs[0].text.split('\n')" class="text-xl text-justify mb-8">
+                            <div class="text-2xl text-justify mb-8">
+                                {{ post.excerpt }}
+                            </div>
+
+                            <iframe v-if="post.video" class="w-full h-[60vh] mb-6" :src="post.video" /> 
+
+                            <div v-for="paragraph in post.body.split('\n')" class="text-xl text-justify mb-8">
                                 <p>{{ paragraph }}</p>
                             </div>
 
-                            <div class="w-full flex justify-center bg-gray-200 mt-4"> 
+                            <div class="w-full flex justify-center bg-gray-200 mt-4  h-max-screen md:max-h-[50vh]"> 
                                 <!-- Image Carousel (Create component when working) -->
-                                <Splide :options="{ rewind: true }" aria-label="Concert images" class="w-full md:w-80 ">
-                                    <SplideSlide v-for="image in post.images">
-                                        <img :src="image.image_url" alt="Sample 1">
+                                <Splide :options="{ rewind: true }" aria-label="Concert images" class=" h-max-screen md:max-h-[50vh]">
+                                    <SplideSlide v-for="image in post.images" class="h-max-screen md:max-h-[50vh] w-full flex justify-center">
+                                        <img :src="image.image_url" alt="Sample 1" class="h-full object-contain">
                                     </SplideSlide>
                                 </Splide>
                             </div>
-
-                            <!-- 
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-                                <img v-for="image in post.images" v-bind:src="image.image_url" alt="" class="border-2 border-black">
-                            </div>
-                            -->
                         </div>
                     </div>
                 </div>

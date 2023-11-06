@@ -5,6 +5,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import Layout from '@/BaseComponents/Layout.vue';
+import CustomButton from '@/CustomComponents/CustomButton.vue';
 
 defineProps({
     canResetPassword: {
@@ -80,19 +81,21 @@ const submit = () => {
                         </label>
                     </div>
 
-                    <div class="flex items-center justify-between mt-4">
+                    <div class="flex items-center justify-between mt-4 mb-2">
                         <Link
                             v-if="canResetPassword"
                             :href="route('password.request')"
-                            class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            class="underline text-sm text-primary-600 hover:text-primary-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                         >
                             Recuperar contraseña
                         </Link>
-
-                        <button :disabled="form.processing" type="submit" class="shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-2 py-1 text-sm hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                            Iniciar Sesión
-                        </button>
                     </div>
+                    <CustomButton
+                        title="Iniciar Sesión"
+                        class="bg-primary-600 hover:bg-primary-800 text-primary-100 text-sm w-full hover:scale-[100%]"
+                        :disabled="form.processing"
+                        type="submit"
+                    />
                 </form>
             </div>
         </div>

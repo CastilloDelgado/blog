@@ -35,10 +35,10 @@ class DatabaseSeeder extends Seeder
             $tag = Tag::find(fake()->randomElement([1,2,3,4,5,6,7,8,9,10]));
             $post->tags()->save($tag);
 
-            for($paragraphs = 0; $paragraphs < 5; $paragraphs++){
-                $paragraph = Paragraph::factory()->create();
-                $post->paragraphs()->save($paragraph);
-            }
+            // for($paragraphs = 0; $paragraphs < 5; $paragraphs++){
+            //     $paragraph = Paragraph::factory()->create();
+            //     $post->paragraphs()->save($paragraph);
+            // }
              
             for($images = 0; $images < 8; $images++){
                 $postImage = PostImage::factory()->create();

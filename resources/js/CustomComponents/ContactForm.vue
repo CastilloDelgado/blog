@@ -12,7 +12,7 @@ defineProps({
 <template>
     <div class="bg-dark-700 background px-2" >
         <div class="flex justify-center py-16 text-white">
-            <form class="sm:2/3 lg:w-1/2">
+            <form class="w-full sm:2/3 lg:w-1/2">
                 <p class="text-center text-4xl font-bold mb-4">Contacto</p>
                 <p class="text-center text-lg  px-6 lg:px-24 mb-8">{{ message }}</p>
                 <div class="lg:px-16">

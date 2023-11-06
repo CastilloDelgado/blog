@@ -15,7 +15,7 @@ class PostController extends Controller
 {
     public function show($id){
         try{
-            $post = Post::with(['author', 'tags', 'paragraphs', 'images'])->find($id);
+            $post = Post::with(['author', 'tags', 'images'])->find($id);
             return Inertia::render('Post', [
                 'post' => $post
             ]);
@@ -39,29 +39,22 @@ class PostController extends Controller
         try {
             $request->validate([
                 'title' => 'required|string|max:255',
-                'location' => 'required|string|max:255',
-                'address' => 'required|string|max:255',
-                'country' => 'required|string|max:255',
-                'state' => 'required|string|max:255',
-                'city' => 'required|string|max:255',
-                'concertDate' => 'required',
-                'band' => 'required|string|max:255',
+                'slug' => 'required|string|max:255',
+                'excerpt' => 'required|string',
+                'video' => 'required|string',
+                'body' => 'required|string',
                 'tags' => 'required|array'
             ]);
 
             $attributes = [
                 'title' => $request["title"],
-                'location' => $request["location"],
-                'address' => $request["address"],
-                'country' => $request["country"],
-                'state' => $request["state"],
-                'city' => $request["city"],
-                'concert_date' => $request["concertDate"],
-                'band'=> $request["band"],
+                'video' => $request["video"],
+                'slug' => $request["slug"],
+                'excerpt' => $request["excerpt"],
+                'body' => $request["body"],
             ];
 
             $attributes['user_id'] =  $request->user()->id;
-            $attributes['published_at'] = $request->concertDate;
 
             // Upload main image file
             $attributes['image_url'] = $request->file('image')->store('images');
@@ -80,11 +73,11 @@ class PostController extends Controller
                 ]);
             }
 
-            // Creating paragraphs and attach them to the post
-            $paragraph = Paragraph::create([
-                'text' => $request->text,
-                'post_id' => $post->id
-            ]);
+            // // Creating paragraphs and attach them to the post
+            // $paragraph = Paragraph::create([
+            //     'text' => $request->text,
+            //     'post_id' => $post->id
+            // ]);
 
             // Attaching tags to the post
             foreach($request->tags as $tagId){

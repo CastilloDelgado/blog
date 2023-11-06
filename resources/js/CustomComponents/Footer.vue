@@ -36,12 +36,25 @@ const links = ref(SOCIAL_MEDIA_LINKS)
             <div class="flex flex-col sm:flex-row justify-left gap-2 w-full sm:w-1/2">
                 <a v-for="link in links" :key="link.media" target="_blank" :href="link.link" class="hover:border-b border-primary-600">{{ link.title }}</a>
             </div>
-            <div class="flex text-right">
-                <p class="mr-1">Yukal</p>
-                <p>Rediseñando el camino</p>
-                <Link href="/login">
-                    <p class="ml-2 text-primary-200 hover:border-b hover:border-primary-200">Iniciar Sesión</p>
-                </Link>
+            <div class="flex flex-col text-right ">
+                <div class="flex mb-2 justify-end">
+                    <p class="mr-1">Yukal</p>
+                    <p>Rediseñando el camino</p>
+                </div>
+                <div class="flex flex-col md:flex-row">
+                    <Link href="/login">
+                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Iniciar Sesión</p>
+                    </Link>
+                    <Link href="/login">
+                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Mi Cuenta</p>
+                    </Link>
+                    <Link href="/login">
+                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Posts</p>
+                    </Link>
+                    <Link href="/posts/create">
+                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Crear Posts</p>
+                    </Link>
+                </div>
             </div>
         </div>
     </div>

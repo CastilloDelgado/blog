@@ -46,6 +46,12 @@ Route::get('/', function(){
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts', function(){
+    $posts = Post::with('tags', 'author')->latest()->take(10)->get();
+    return Inertia::render('AllPosts', [
+        'posts' => $posts
+    ]);
+})->name('posts.show');
 
 // TAGS
 Route::get('tags/{tag:name}', function(Tag $tag){
@@ -62,6 +68,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
+Route::get('/admin/posts', function(){
+    return Inertia::render('1Admin/AllPosts', [
+        "posts" => Post::all()
+    ]);
 });
 
 

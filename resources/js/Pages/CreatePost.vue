@@ -1,21 +1,18 @@
 <script setup>
 import Layout from '@/BaseComponents/Layout.vue';
+import CustomButton from '@/CustomComponents/CustomButton.vue';
 import { Head } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3'
 
 const form = useForm({
     title: null,
-    location: null,
-    address: null,
-    country: null,
-    state: null,
-    city: null,
+    slug: null,
+    video: null,
+    excerpt: null,
+    body: null,
     image: null,
-    concertDate: null,
-    band: null,
     tags: null,
     postImages: null,
-    text: null
 })
 
 
@@ -33,39 +30,27 @@ defineProps({
     <Layout>
         <Head title="Create Post" />
         <div class="grid place-items-center py-24 px-2">
-            <p class="font-serif font-bold text-4xl mb-8">Share your experience with a new post!</p>
+            <p class="font-serif font-bold text-4xl mb-8">Crear un nuevo post!</p>
             <form @submit.prevent="submit" class="md:w-1/2">
                 <div class="mb-2 flex w-full">
-                    <label class="self-start" for="title">Title</label>
+                    <label class="self-start" for="title">Título</label>
                     <input class="ml-4 w-full" id="title"  type="text" v-model="form.title" />
                 </div>
                 <div class="mb-2 flex w-full">
-                    <label class="self-start" for="location">Location</label>
-                    <input class="ml-4 w-full" id="location"  type="text" v-model="form.location" />
+                    <label class="self-start" for="slug">Slug</label>
+                    <input class="ml-4 w-full" id="slug"  type="text" v-model="form.slug" />
                 </div>
                 <div class="mb-2 flex w-full">
-                    <label class="self-start" for="address">Address</label>
-                    <input class="ml-4 w-full" id="address" type="text"  v-model="form.address" />
+                    <label class="self-start" for="video">Video URL</label>
+                    <input class="ml-4 w-full" id="video"  type="text" v-model="form.video" />
                 </div>
                 <div class="mb-2 flex w-full">
-                    <label class="self-start" for="country">Country</label>
-                    <input class="ml-4 w-full" id="country" type="text"  v-model="form.country" />
+                    <label class="self-start" for="excerpt">Extracto</label>
+                    <input class="ml-4 w-full" id="excerpt"  type="text" v-model="form.excerpt" />
                 </div>
-                <div class="mb-2 flex w-full">
-                    <label class="self-start" for="state">State</label>
-                    <input class="ml-4 w-full" id="state" type="text"  v-model="form.state" />
-                </div>
-                <div class="mb-4 flex w-full">
-                    <label class="self-start" for="city">City</label>
-                    <input class="ml-4 w-full" id="city" type="text"  v-model="form.city" />
-                </div>
-                <div class="mb-4 flex w-full">
-                    <label class="self-start" for="concertDate">Concert Date</label>
-                    <input class="ml-4 w-full" id="concertDate" type="date"  v-model="form.concertDate" />
-                </div>
-                <div class="mb-4 flex">
-                    <label class="self-start" for="band">Band Name</label>
-                    <input class="ml-4 w-full" id="band" type="text"  v-model="form.band" />
+                <div class="mb-4 w-full flex">
+                    <label class="self-start" for="body">Contenido</label>
+                    <textarea class="ml-4 w-full" id="body"  v-model="form.body" rows="10" />
                 </div>
                 <div class="mb-4 flex">
                     <label for="tags" class="self-start">Tags</label>
@@ -76,25 +61,22 @@ defineProps({
                     </select>
                 </div>
                 <div class="mb-6 flex">
-                    <label class="self-start" for="image">Main Image</label>
-                    <label for="image" class="ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                        Click here to add image!
+                    <label class="self-start" for="image">Imagen Principal</label>
+                    <label for="image" class="ml-3 bg-primary-500 hover:bg-primary-600 text-primary-100 px-4 py-2 transition rounded font-bold text-center">
+                        Click aquí para agregar imagen principal.
                     </label>
                     <input id="image" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
                 </div>
                 <div class="mb-5 flex">
-                    <label class="self-start" for="postImages">Gallery Images</label>
-                    <label for="postImages" class="ml-3 shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">
-                        Click here to add more images!
+                    <label class="self-start" for="postImages">Galería de Imagenes</label>
+                    <label for="postImages" class="ml-3 bg-primary-500 hover:bg-primary-600 text-primary-100 px-4 py-2 transition rounded font-bold text-center">
+                        Click aquí para agregar multiples imagenes a la galería
                     </label>
                     <input id="postImages" class="hidden" type="file" multiple @input="form.postImages = $event.target.files"  />
                 </div>
-                <div class="mb-4 w-full flex">
-                    <label class="self-start" for="text">Share yourself!</label>
-                    <textarea class="ml-4 w-full" id="text"  v-model="form.text" rows="10" />
-                </div>
-                <button type="submit" class="w-full shadow-[-4px_4px_0px_0px_rgba(0,0,0,1)] border border-black px-4 py-2 hover:bg-black hover:text-white hover:border-l-white hover:border-b-white">Create Post!</button>
+                <CustomButton type="submit" class="bg-primary-600 hover:bg-primary-800 text-primary-100 w-full" title="Publicar Post!">Publicar Post!</CustomButton>
             </form>
         </div>
     </Layout>
+    
 </template>

@@ -2,6 +2,7 @@
 import CustomButton from '@/CustomComponents/CustomButton.vue';
 import PostBadge from '@/CustomComponents/PostBadge.vue';
 import { BACKGROUND_COLORS } from '@/constants';
+import { Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
 const backgroundColors = ref([...BACKGROUND_COLORS])
@@ -26,7 +27,9 @@ defineProps({
                 <PostBadge v-for="(post, index) in posts" class="bg-primary-200" :key="post.id" :post="post" />
             </div>
             <div class="flex justify-center lg:mb-2">
-                <CustomButton title="Click aquí para ver más posts" class="font-bold bg-primary-600 hover:bg-primary-800 text-primary-100" />
+                <Link href="/posts">    
+                    <CustomButton title="Click aquí para ver más posts" class="font-bold bg-primary-600 hover:bg-primary-800 text-primary-100" />
+                </Link>
             </div>
         </div>
     </div>

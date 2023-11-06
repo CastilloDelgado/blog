@@ -2,11 +2,7 @@
 import { Link } from '@inertiajs/vue3'
 import BaseDate from './BaseDate.vue';
 import CustomButton from './CustomButton.vue';
-import { ref } from 'vue';
-import { BACKGROUND_COLORS} from "@/constants"
 import TagBadge from './TagBadge.vue';
-
-const backgroundColors = ref(BACKGROUND_COLORS)
 
 defineProps({
     post: Object,
@@ -14,9 +10,9 @@ defineProps({
 </script>
 
 <template>
-    <Link :href="route('posts.show', post)" class="hover:scale-[102%] transition">
-        <div class="w-80 mb-6  transition rounded-lg h-full grid grid-cols-1 content-between" >
-            <div class="">
+    <Link :href="`/posts/${post.id}`" class="hover:scale-[102%] transition rounded-lg">
+        <div class="w-80 mb-6 transition rounded-lg h-full grid grid-cols-1 content-between" >
+            <div class="rounded-lg">
                 <img :src="post.image_url" alt="" class=" h-64 w-full object-cover rounded-t-lg">
                 <div class="flex justify-center flex-col p-4">
                     <b class="font-serif text-lg text-center mb-3 text-primary-700 capitalize">{{ post.title }}</b>
