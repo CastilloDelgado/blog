@@ -43,7 +43,6 @@ Route::get('/', function(){
 
 
 // POSTS
-Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts', function(){
@@ -52,6 +51,7 @@ Route::get('/posts', function(){
         'posts' => $posts
     ]);
 })->name('posts.show');
+Route::delete('/admin/posts/{id}', [PostController::class, 'delete'])->name('post.delete');
 
 // TAGS
 Route::get('tags/{tag:name}', function(Tag $tag){
@@ -68,14 +68,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    // Admin Posts Section
+    Route::get('/admin/posts', function(){
+        return Inertia::render('AllPosts', [
+            "posts" => Post::all()
+        ]);
+    })->name('admin.posts');
+    Route::get('/admin/posts/create', [PostController::class, 'create'])->name('posts.create');
 });
 
 
-Route::get('/admin/posts', function(){
-    return Inertia::render('1Admin/AllPosts', [
-        "posts" => Post::all()
-    ]);
-});
+
 
 
 require __DIR__.'/auth.php';

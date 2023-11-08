@@ -32,7 +32,7 @@ defineProps({
         <Head title="Create Post" />
         <div class="container mx-auto">
             <div class="mb-4 pb-2 border-b-2 px-2 border-primary-400 mb-6" >
-                <b class="text-xl text-primary-600">Crear un nuevo post</b>
+                <b class="text-xl text-primary-600">Editar post</b>
             </div>
             <div class="flex justify-center gap-2 flex-wrap mb-8" >
                 <form @submit.prevent="submit">

@@ -8,7 +8,6 @@ import Banner1 from '@/CustomComponents/Banner1.vue';
     <div class="bg-primary-50 scroll-smooth">
         <Navbar />    
         <slot />
-        <!-- <Banner1 /> -->
         <Footer />
     </div>
 </template>

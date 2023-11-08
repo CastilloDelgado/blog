@@ -9,6 +9,7 @@ use App\Models\Tag;
 use App\Models\Paragraph;
 use App\Models\PostImage;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Redirect;
 
 
 class PostController extends Controller
@@ -31,6 +32,16 @@ class PostController extends Controller
                 "tags" => $tags
             ]);
         } catch(Exception $e){
+            return($e);
+        }
+    }
+
+    public function delete(Post $post){
+        try{
+
+            $result = $post->delete();
+            return Redirect::route('admin.posts');
+        } catch( Exception $e){
             return($e);
         }
     }
