@@ -17,7 +17,9 @@ defineProps({
         <div class="p-4">
             <p class="mb-2 text-primary-600 font-bold text-2xl">{{ product.title }}</p>
             <p class="text-primary-800 text-justify mb-8">{{ product.description }}</p>
-            <CustomButton class="bg-primary-600 hover:bg-primary-700 text-primary-100 mb-6" title="Contactanos" />
+            <a href="#contact-form">
+                <CustomButton class="bg-primary-600 hover:bg-primary-700 text-primary-100 mb-6" title="Contactanos" />
+            </a>
         </div>
     </div>
 </template>

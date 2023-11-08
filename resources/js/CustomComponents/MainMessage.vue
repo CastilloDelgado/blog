@@ -34,7 +34,9 @@ onMounted(() => {
                                 Acompañar e impulsar el despertar espiritual y de consciencia <b>resideñando el camino.</b>
                             </p>
                             <div class="flex justify-center">
-                                <CustomButton class="text-xl bg-primary-600 hover:bg-primary-700 text-primary-100" title="Contactanos" />
+                                <a href="#contact-form">
+                                    <CustomButton class="text-xl bg-primary-600 hover:bg-primary-700 text-primary-100" title="Contactanos" />
+                                </a>
                             </div>
                         </div>
                     </Transition>

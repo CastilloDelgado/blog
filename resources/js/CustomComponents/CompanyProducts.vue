@@ -20,7 +20,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="bg-primary-100 py-24">
+    <div id="services" class="bg-primary-100 py-24">
         <div class="container mx-auto">
             <div class="px-2">
                 <div class="mb-12 text-center">

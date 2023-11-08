@@ -14,6 +14,13 @@ export const NAVBAR_OPTIONS = [
         link: "/posts",
         selected: false
     },
+    {
+        id: 3,
+        title: "Servicios",
+        alt: "servicios",
+        link: "#services",
+        selected: false
+    },
 ]
 
 export const SOCIAL_MEDIA_LINKS = [

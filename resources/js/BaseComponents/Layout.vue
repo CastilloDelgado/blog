@@ -5,7 +5,7 @@ import Banner1 from '@/CustomComponents/Banner1.vue';
 </script>
 
 <template>
-    <div class="bg-primary-50">
+    <div class="bg-primary-50 scroll-smooth">
         <Navbar />    
         <slot />
         <!-- <Banner1 /> -->

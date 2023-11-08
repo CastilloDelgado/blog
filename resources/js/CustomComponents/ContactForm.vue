@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="bg-dark-700 background px-2" >
+    <div id="contact-form" class="bg-dark-700 background px-2" >
         <div class="flex justify-center py-16 text-white">
             <form class="w-full sm:2/3 lg:w-1/2">
                 <p class="text-center text-4xl font-bold mb-4">Contacto</p>

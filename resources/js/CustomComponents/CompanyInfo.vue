@@ -34,7 +34,9 @@ defineProps({
                         <img :src="textLogo" alt="" class="h-24 w-auto">
                     </div>
                     <p class="text-primary-800 text-justify mb-8 px-4 md:px-16 lg:px-12 text-lg">{{  description }}</p>
-                    <CustomButton class="bg-primary-600 hover:bg-primary-700 text-primary-100" title="Contactanos" />
+                    <a href="#contact-form">
+                        <CustomButton class="bg-primary-600 hover:bg-primary-700 text-primary-100" title="Contactanos" />
+                    </a>
                 </div>
             </div>
             <div class="lg:hidden lg:w-1/2 h-auto grid place-content-center">
