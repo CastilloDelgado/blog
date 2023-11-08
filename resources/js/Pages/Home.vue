@@ -12,12 +12,10 @@ import PostsSection from "@/BaseComponents/PostsSection.vue"
 
 // ASSETS
 import carouselImage1 from "../../images/carousel/1.jpg";
-import carouselImage2 from "../../images/carousel/2.jpg";
 import carouselImage3 from "../../images/carousel/3.jpg";
 import carouselImage4 from "../../images/carousel/4.jpg";
 import carouselImage5 from "../../images/carousel/5.jpg";
 import carouselImage6 from "../../images/carousel/6.jpg";
-import carouselImage7 from "../../images/carousel/7.jpg";
 import carouselImage8 from "../../images/carousel/8.jpg";
 import productsImage1 from "../../images/products/1.jpg";
 import productsImage2 from "../../images/products/2.jpg";
@@ -51,15 +49,13 @@ defineProps({
         <MainMessage />
         
         <CompanyInfo
-            description="Es la fusión de nuestros nombres, nuestra amistad, el compartir cosas en común y sobre todo el llamado al servicio hacia los demás. Este proyecto nace desde el amor de transmitir nuestras experiencias del camino espiritual que ambas hemos transitado y el aprendizaje que hemos adquirido a través del tiempo nos es grato compartirlo."
+            description="YuKal nace como ese llamado a compartir la experiencia que han tenido dos mujeres a través de los años, en su búsqueda del despertar de la conciencia, de la sanación, el entendimiento del existir, los propósitos, aprendizajes de la vida y el recorrer muchos caminos que las llevaron a converger en este hermoso proyecto al que le han puesto todo el corazón, han fusionado sus nombres para darle vida a YuKal y poner toda su esencia en ello."
             :images="[
                 carouselImage1,
-                carouselImage2,
                 carouselImage3,
                 carouselImage4,
                 carouselImage5,
                 carouselImage6,
-                carouselImage7,
                 carouselImage8,
             ]"
         />
