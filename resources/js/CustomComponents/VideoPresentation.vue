@@ -1,5 +1,6 @@
 <script setup>
 import CustomButton from './CustomButton.vue';
+import image from "../../images/video-cover.jpeg"
 
 defineProps({
     video: {
@@ -26,7 +27,7 @@ defineProps({
                     </div>
                 </div>
                 <div class="lg:w-1/2 ">
-                    <video class="w-auto lg:h-full" height="100hv" :src="video" controls />
+                    <video class="w-auto lg:h-full" height="100hv" :src="video" controls  :poster="image"/>
                 </div>
             </div>
         </div>

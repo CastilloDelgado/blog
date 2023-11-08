@@ -1,6 +1,7 @@
 <script setup>
 import CustomButton from "./CustomButton.vue";
 import ImageCarousel from "./ImageCarousel.vue";
+import textLogo from "../../images/logos/text-logo-dark.png"
 
 defineProps({
     title: {
@@ -29,7 +30,9 @@ defineProps({
             </div>
             <div class="py-12 mb-6 lg:w-1/2 text-center px-8 grid place-content-center">
                 <div>
-                    <p class="text-primary-600 text-4xl font-bold mb-8">{{ title }}</p>
+                    <div class="flex justify-center mb-2">
+                        <img :src="textLogo" alt="" class="h-24 w-auto">
+                    </div>
                     <p class="text-primary-800 text-justify mb-8 px-4 md:px-16 lg:px-12 text-lg">{{  description }}</p>
                     <CustomButton class="bg-primary-600 hover:bg-primary-700 text-primary-100" title="Contactanos" />
                 </div>
