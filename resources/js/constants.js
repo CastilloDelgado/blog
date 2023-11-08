@@ -9,16 +9,16 @@ export const NAVBAR_OPTIONS = [
     },
     {
         id: 2,
-        title: "Nuestro Blog",
-        alt: "blog",
-        link: "/posts",
+        title: "Servicios",
+        alt: "servicios",
+        link: "#services",
         selected: false
     },
     {
         id: 3,
-        title: "Servicios",
-        alt: "servicios",
-        link: "#services",
+        title: "Nuestro Blog",
+        alt: "blog",
+        link: "/posts",
         selected: false
     },
 ]

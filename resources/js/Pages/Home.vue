@@ -62,7 +62,7 @@ defineProps({
             ]"
         />
         
-        <PostsSection :posts="latestPosts" />
+        <PostsSection title="Nuestros últimos posts!"  description="Date una vuelta por nuestros últimos posts de nuestro blog." :posts="latestPosts" />
 
         <VideoPresentation 
             :video="video" 
@@ -77,23 +77,33 @@ defineProps({
             :products="[
                 {
                     id: 1,
-                    title: 'Despertar de conciencia',
-                    description:
-                        'El viaje del ser humano es el despertar de conciencia, el cual nos puede llegar a temprana edad o incluso antes de trasmutar.',
+                    title: 'Talleres',
+                    bullets: [
+                        'Ceremonia de cacao',
+                        'Aniversario de vida',
+                        'Sembrando mi proyecto',
+                        'Transición a la juventud',
+                        'Cereminia del útero'
+                    ],
                     image: productsImage1,
                 },
                 {
                     id: 2,
-                    title: 'Despertar espiritual',
-                    description:
-                        'Tú puedes estar muerte o con experiencia de medicina sagrada, en despierto en consciencia y no en espíritu o al un parto, cuando te rompen el corazón.',
+                    title: 'Ceremonias',
+                    bullets: [
+                        'Mujer Medicina ',
+                        'Circulo de mujeres (1 vez al mes con temas seleccionados) DISPONIBLE',
+                        'Útero divino / ceremonia',
+                        'Introducción a la meditación',
+                        'Crea tu primer habito en consciencia en 21 días',
+                    ],
                     image: productsImage2,
                 },
                 {
                     id: 3,
-                    title: 'Servicios',
+                    title: 'Escuela',
                     description:
-                        'Mujeres medicina, talleres, Ceremonias particulares, Escuela mística, Meditaciones guiadas, etc...',
+                        'Disponible 2024',
                     image: productsImage3,
                 },
             ]"
