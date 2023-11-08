@@ -20,7 +20,9 @@ import carouselImage8 from "../../images/carousel/8.jpg";
 import productsImage1 from "../../images/products/1.jpg";
 import productsImage2 from "../../images/products/2.jpg";
 import productsImage3 from "../../images/products/3.jpg";
+
 import video from "../../videos/presentation.mp4";
+import poster from "../../images/video-cover.jpeg"
 
 // import Header from '@/CustomComponents/Header.vue';
 // import Banner1 from '@/CustomComponents/Banner1.vue';
@@ -60,13 +62,18 @@ defineProps({
             ]"
         />
         
-        <PostsSection :posts="latestPosts"/>
+        <PostsSection :posts="latestPosts" />
 
-        <VideoPresentation :video="video" />
+        <VideoPresentation 
+            :video="video" 
+            :poster="poster" 
+            title="Despertar de la conciencia" 
+            description="YuKal tiene una visión clara que queremos compartir contigo, donde te acompañaremos de la mano en el rediseño del camino de vida que has venido a transitar."
+        />
 
         <CompanyProducts
             title="Nuestros Servicios"
-            description="La siembra de proyecto es una ceremonia holística donde se le da nacimiento al emprendimiento de la persona, otorgándole al proyecto la importancia espiritual a través de los elementos de nuestra madre tierra y dándole un corazón con su energía particular y necesaria."
+            description="YuKal es una comunidad donde tendrás el espacio para aprender con nuestros talleres, cursos, ceremonias, donde podrás exponer tus intereses, tus dudas y experiencias. YuKal es un espacio para retroalimentar el espíritu para así poder llegar a tus objetivos a través de ti mismo."
             :products="[
                 {
                     id: 1,
