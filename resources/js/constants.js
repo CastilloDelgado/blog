@@ -23,6 +23,23 @@ export const NAVBAR_OPTIONS = [
     },
 ]
 
+export const ADMIN_OPTIONS = [
+    {
+        id: 1,
+        title: "Posts",
+        alt: "posts",
+        link: '/admin/posts',
+        selected:false
+    },
+    {
+        id: 2,
+        title: "Crear Post",
+        alt: "create-posts",
+        link: '/admin/posts/create',
+        selected:false
+    },
+]
+
 export const SOCIAL_MEDIA_LINKS = [
     {
         media: "Facebook",

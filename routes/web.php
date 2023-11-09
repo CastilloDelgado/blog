@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\AdminPostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -19,39 +21,14 @@ use App\Models\Tag;
 |
 */
 
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
 
-Route::get('/', function(){
-    // return Inertia::render('Home', [
-    //     'highlightPosts' => Post::with('tags', 'author')->inRandomOrder()->take(7)->get(),
-    //     'bestPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
-    //     'randomPosts' => Post::with('tags', 'author')->inRandomOrder()->take(4)->get(),
-    //     'latestPosts' => Post::with('tags', 'author')->latest()->take(4)->get(),
-    //     'tags' => Tag::all()
-    // ]);
-    return Inertia::render('Home', [
-        'latestPosts' => Post::with('tags', 'author')->latest()->take(3)->get()
-    ]);
-})->name('home');
 
+// PUBLIC ROUTES
+Route::get('/', [PublicController::class, 'home'])->name('home');
 
 // POSTS
-Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts', function(){
-    $posts = Post::with('tags', 'author')->latest()->take(10)->get();
-    return Inertia::render('AllPosts', [
-        'posts' => $posts
-    ]);
-})->name('posts.show');
-Route::delete('/admin/posts/{id}', [PostController::class, 'delete'])->name('post.delete');
+Route::get('/posts', [PublicController::class, 'allPosts'])->name('posts.show');
 
 // TAGS
 Route::get('tags/{tag:name}', function(Tag $tag){
@@ -60,25 +37,16 @@ Route::get('tags/{tag:name}', function(Tag $tag){
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
     // Admin Posts Section
-    Route::get('/admin/posts', function(){
-        return Inertia::render('AllPosts', [
-            "posts" => Post::all()
-        ]);
-    })->name('admin.posts');
-    Route::get('/admin/posts/create', [PostController::class, 'create'])->name('posts.create');
+    Route::get('/admin/posts', [AdminPostController::class, 'show'] )->name('admin.posts');
+    Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('posts.create');
+    Route::post('/posts', [AdminPostController::class, 'store'])->name('posts.store');
+    Route::delete('/admin/posts/{id}', [AdminPostController::class, 'delete'])->name('post.delete');
 });
-
-
-
-
 
 require __DIR__.'/auth.php';
