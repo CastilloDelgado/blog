@@ -45,14 +45,8 @@ const links = ref(SOCIAL_MEDIA_LINKS)
                     <Link href="/login">
                         <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Iniciar Sesión</p>
                     </Link>
-                    <Link href="/login">
-                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Mi Cuenta</p>
-                    </Link>
-                    <Link href="/login">
-                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Posts</p>
-                    </Link>
-                    <Link href="/posts/create">
-                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Crear Posts</p>
+                    <Link href="/admin/posts">
+                        <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Admin</p>
                     </Link>
                 </div>
             </div>
