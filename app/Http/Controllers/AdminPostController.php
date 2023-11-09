@@ -12,25 +12,25 @@ use Illuminate\Support\Facades\Redirect;
 
 class AdminPostController extends Controller
 {
-    function show(){
+    public function show(){
         return Inertia::render('Admin/AllPosts', [
             "posts" => Post::with(['author', 'tags', 'images'])->orderByDesc('created_at')->get()
         ]);
     }
 
-    function edit(Post $post){
+    public function edit(Post $post){
         return Inertia::render('EditPost', [
             "post" => Post::with(['author', 'tags', 'images'])->find($post->id),
             "tags" => Tag::all()
         ]);
     }
 
-    public function create(){
+    function create(){
         try{
-            $tags = Tag::all();
-            return Inertia::render('CreatePost', [
-                "tags" => $tags
-            ]);
+            // return Inertia::render('CreatePost', [
+            //     "tags" => Tag::all()
+            // ]);
+            return "Yes";
         } catch(Exception $e){
             return($e);
         }

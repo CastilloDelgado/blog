@@ -27,7 +27,7 @@ use App\Models\Tag;
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
 // POSTS
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.index');
 Route::get('/posts', [PublicController::class, 'allPosts'])->name('posts.show');
 
 // TAGS
@@ -50,7 +50,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/posts', [AdminPostController::class, 'show'] )->name('admin.posts.show');
     Route::get('/admin/posts/{post}', [AdminPostController::class, 'edit'] )->name('admin.posts.edit');
     Route::put('/admin/posts/{post}', [AdminPostController::class, 'update'])->name('admin.posts.update');
-    Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('posts.create');
+    // Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('admin.posts.create');
+    Route::get('/admin/posts/create', function(){
+        return("Hello");
+    });
     Route::post('/posts', [AdminPostController::class, 'store'])->name('posts.store');
     Route::delete('/admin/posts/{id}', [AdminPostController::class, 'delete'])->name('post.delete');
 });

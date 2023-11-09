@@ -1,6 +1,5 @@
 <script setup>
 import AdminLayout from '@/BaseComponents/AdminLayout.vue';
-import Layout from '@/BaseComponents/Layout.vue';
 import CustomButton from '@/CustomComponents/CustomButton.vue';
 import UploadImage from '@/CustomComponents/UploadImage.vue';
 import { Head } from '@inertiajs/vue3';
