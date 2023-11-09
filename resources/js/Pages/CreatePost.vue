@@ -45,6 +45,7 @@ const galleryImages = computed(() => {
 
 
 function submit(){
+    form.slug = slug;
     form.post('/posts')
 }
 

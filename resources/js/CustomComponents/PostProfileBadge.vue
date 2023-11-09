@@ -2,7 +2,7 @@
 import BaseDate from './BaseDate.vue';
 
     defineProps({
-        published_at: String,
+        date: String,
         author: Object
     })
 </script>
@@ -13,7 +13,7 @@ import BaseDate from './BaseDate.vue';
         <div class="my-0 text-sm">
             <b>Autor:</b>
             <p class="font-bold">{{ author.name }}</p>
-            <BaseDate :timestamp="published_at" />
+            <BaseDate :timestamp="date" />
         </div>
     </div>
 </template>

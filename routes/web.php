@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Admin Posts Section
-    Route::get('/admin/posts', [AdminPostController::class, 'show'] )->name('admin.posts');
+    Route::get('/admin/posts', [AdminPostController::class, 'show'] )->name('admin.posts.show');
     Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('posts.create');
     Route::post('/posts', [AdminPostController::class, 'store'])->name('posts.store');
     Route::delete('/admin/posts/{id}', [AdminPostController::class, 'delete'])->name('post.delete');

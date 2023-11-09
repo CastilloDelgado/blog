@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Post;
+use App\Models\PostImage;
 use App\Models\Tag;
+use Illuminate\Support\Facades\Redirect;
 
 
 class AdminPostController extends Controller
 {
     function show(){
         return Inertia::render('Admin/AllPosts', [
-            "posts" => Post::all()
+            "posts" => Post::orderByDesc('created_at')->get()
         ]);
     }
 
@@ -71,7 +73,7 @@ class AdminPostController extends Controller
                 $post->tags()->save($tag);
             }
 
-            return($post);
+            return Redirect::route('admin.posts.show');
         } catch(Exception $e){
             return($e);
         }

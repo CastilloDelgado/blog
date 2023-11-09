@@ -44,7 +44,7 @@ defineProps({
                                 <PostMainImage :image_url="post.image_url"  />
                             </div>
                             <div class="w-1/2 lg:w-full pl-6  lg:pl-0 self-end lg:self-top">
-                                <PostProfileBadge :published_at="post.published_at"  :author="post.author"/>
+                                <PostProfileBadge :date="post.author.created_at"  :author="post.author"/>
                             </div>
                         </div>
                         <div class="lg:w-4/5 lg:pl-12">
@@ -53,7 +53,7 @@ defineProps({
                             </div>
                             <div class="mb-8 flex">
                                 <p class="font-sans mr-2">{{ post.author.name }}, </p>
-                                <BaseDate :timestamp="post.concert_date " />
+                                <BaseDate :timestamp="post.created_at " />
                             </div>
 
                             <div class="text-2xl text-justify mb-8">

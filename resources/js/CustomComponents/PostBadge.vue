@@ -16,11 +16,11 @@ defineProps({
                 <img :src="post.image_url" alt="" class=" h-64 w-full object-cover rounded-t-lg">
                 <div class="flex justify-center flex-col p-4">
                     <b class="font-serif text-lg text-center mb-3 text-primary-700 capitalize">{{ post.title }}</b>
-                    <p class="text-sm text-justify mb-4 text-primary-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, animi? Voluptate laboriosam, ullam temporibus maiores...</p>
+                    <p class="text-sm text-justify mb-4 text-primary-900">{{  post.excerpt }}</p>
                     <div class="font-sans text-xs text-primary-950 mb-6">
                         <div class="mr-1 flex">
                             <b class="mr-1">Fecha: </b> 
-                            <BaseDate :timestamp="post.concert_date" />
+                            <BaseDate :timestamp="post.created_at" />
                         </div>
                         <p class="mr-1"><b>Autor:</b> {{ post?.author?.name || 'Unknown' }}</p>
                     </div>
