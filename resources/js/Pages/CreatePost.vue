@@ -57,7 +57,7 @@ defineProps({
 
 <template>
     <AdminLayout>
-        <Head title="Create Post" />
+        <Head title="Crear Post" />
         <div class="container mx-auto">
             <div class="mb-4 pb-2 border-b-2 px-2 border-primary-400 mb-6" >
                 <b class="text-xl text-primary-600">Crear un nuevo post</b>

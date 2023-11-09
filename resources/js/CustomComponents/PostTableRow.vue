@@ -34,7 +34,9 @@ function deletePost(){
                     </div>
                 </div>
                 <div class="px-4 py-2 flex flex-col justify-center gap-2">
-                    <CustomButton class="w-full text-xs bg-blue-600 hover:blue-red-700 text-blue-100" title="Editar" />
+                    <Link :href="`/admin/posts/${post.id}`">
+                        <CustomButton class="w-full text-xs bg-blue-600 hover:blue-red-700 text-blue-100" title="Editar" />
+                    </Link>
                     <form @submit.prevent="deletePost"> 
                         <CustomButton type="submit" class="w-full text-xs bg-red-600 hover:bg-red-700 text-red-100" title="Eliminar" />
                     </form>

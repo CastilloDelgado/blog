@@ -79,11 +79,11 @@ defineProps({
                     id: 1,
                     title: 'Talleres',
                     bullets: [
-                        'Ceremonia de cacao',
-                        'Aniversario de vida',
-                        'Sembrando mi proyecto',
-                        'Transición a la juventud',
-                        'Cereminia del útero'
+                        'Mujer Medicina ',
+                        'Circulo de mujeres (1 vez al mes con temas seleccionados) DISPONIBLE',
+                        'Útero divino / ceremonia',
+                        'Introducción a la meditación',
+                        'Crea tu primer habito en consciencia en 21 días',
                     ],
                     image: productsImage1,
                 },
@@ -91,11 +91,11 @@ defineProps({
                     id: 2,
                     title: 'Ceremonias',
                     bullets: [
-                        'Mujer Medicina ',
-                        'Circulo de mujeres (1 vez al mes con temas seleccionados) DISPONIBLE',
-                        'Útero divino / ceremonia',
-                        'Introducción a la meditación',
-                        'Crea tu primer habito en consciencia en 21 días',
+                        'Ceremonia de cacao',
+                        'Aniversario de vida',
+                        'Sembrando mi proyecto',
+                        'Transición a la juventud',
+                        'Cereminia del útero'
                     ],
                     image: productsImage2,
                 },

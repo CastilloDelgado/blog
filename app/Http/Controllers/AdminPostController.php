@@ -18,6 +18,13 @@ class AdminPostController extends Controller
         ]);
     }
 
+    function edit(Post $post){
+        return Inertia::render('EditPost', [
+            "post" => Post::with(['author', 'tags', 'images'])->find($post->id),
+            "tags" => Tag::all()
+        ]);
+    }
+
     public function create(){
         try{
             $tags = Tag::all();
@@ -76,6 +83,58 @@ class AdminPostController extends Controller
             return Redirect::route('admin.posts.show');
         } catch(Exception $e){
             return($e);
+        }
+    }
+
+    public function update(Post $post, Request $request){
+        try {
+            $request->validate([
+                'title' => 'required|string|max:255',
+                'slug' => 'required|string|max:255',
+                'excerpt' => 'required|string',
+                'video' => 'required|string',
+                'body' => 'required|string',
+                'tags' => 'required|array'
+            ]);
+
+
+            $post->title = $request["title"];
+            $post->video = $request["video"];
+            $post->slug = $request["slug"];
+            $post->excerpt = $request["excerpt"];
+            $post->body = $request["body"];
+
+
+            $post->user_id =  $request->user()->id;
+
+            $post->update();
+
+            // Upload main image file
+            // $attributes['image_url'] = $request->file('image')->store('public/images');
+
+            // Create post
+            
+
+            // // Upload the rest of the images and attach them to the post
+            // $postImages = $request->file('postImages');
+            
+            // foreach($postImages as $postImageFile){
+            //     $postImageUrl = $postImageFile->store('public/images');
+            //     PostImage::create([
+            //         'post_id' => $post->id,
+            //         'image_url' => $postImageUrl
+            //     ]);
+            // }
+
+            // // Attaching tags to the post
+            // foreach($request->tags as $tagId){
+            //     $tag = Tag::find($tagId);
+            //     $post->tags()->save($tag);
+            // }
+
+            return Redirect::route('admin.posts.show');
+        }  catch(Exception $e){
+            return ($e);
         }
     }
 
