@@ -14,7 +14,7 @@ class AdminPostController extends Controller
 {
     function show(){
         return Inertia::render('Admin/AllPosts', [
-            "posts" => Post::orderByDesc('created_at')->get()
+            "posts" => Post::with(['author', 'tags', 'images'])->orderByDesc('created_at')->get()
         ]);
     }
 
@@ -79,10 +79,10 @@ class AdminPostController extends Controller
         }
     }
 
-    public function delete(Post $post){
+    public function delete($id){
         try{
-            $result = $post->delete();
-            return Redirect::route('admin.posts');
+            $result = Post::find($id)->delete();
+            return Redirect::route('admin.posts.show');
         } catch( Exception $e){
             return($e);
         }

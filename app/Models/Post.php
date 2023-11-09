@@ -33,11 +33,6 @@ class Post extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    // public function paragraphs(): HasMany
-    // {
-    //     return $this->hasMany(Paragraph::class);
-    // }
-
     public function images(): HasMany
     {
         return $this->hasMany(PostImage::class, 'post_id');

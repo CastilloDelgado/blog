@@ -13,7 +13,7 @@ const options = ref(ADMIN_OPTIONS)
     <div class="bg-primary-50 scroll-smooth">
         <Navbar />    
 
-        <div class="container mx-auto flex pt-36 pb-12">
+        <div class="container mx-auto flex pt-36 pb-12 min-h-screen">
             <div class="w-64 border-r-2 text-right px-4 list-none border-primary-400">
                 <ul class="list-none">
                     <li v-for="option in options"><Link :href="option.link">{{ option.title }}</Link></li>
