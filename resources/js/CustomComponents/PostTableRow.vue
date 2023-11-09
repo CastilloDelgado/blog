@@ -27,7 +27,7 @@ function deletePost(){
                     <p class="text-sm text-justify mb-4 text-primary-900">{{ post.extract }}</p>
                     <div class="font-sans text-xs text-primary-950">
                         <div class="mr-1 flex">
-                            <b class="mr-1">Fecha: </b> 
+                            <b class="mr-1">Creado: </b> 
                             <BaseDate :timestamp="post.created_at" />
                         </div>
                         <p class="mr-1"><b>Autor:</b> {{ post?.author?.name || 'Unknown' }}</p>

@@ -41,7 +41,7 @@ const links = ref(SOCIAL_MEDIA_LINKS)
                     <p class="mr-1">Yukal</p>
                     <p>Rediseñando el camino</p>
                 </div>
-                <div class="flex flex-col md:flex-row">
+                <div class="flex flex-col md:flex-row justify-end">
                     <Link href="/login">
                         <p class="ml-1 mb-1 text-primary-200 hover:border-b hover:border-primary-200">Iniciar Sesión</p>
                     </Link>
