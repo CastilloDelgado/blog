@@ -79,7 +79,7 @@ onMounted(() => {
                 <div class="pb-2 px-2 mb-6">
                     <p class="text-center font-bold text-xl mb-4">Imagen de perfil </p>
                     <form @submit.prevent="submit">
-                        <div class="w-full flex jusity-center">
+                        <div class="w-full flex justify-center">
                             <UploadImage :image="user.image_url" /> 
                         </div>
                         <div class="mb-6">
