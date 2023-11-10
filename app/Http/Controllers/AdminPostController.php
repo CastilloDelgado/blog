@@ -79,7 +79,7 @@ class AdminPostController extends Controller
                 $post->tags()->save($tag);
             }
 
-            return Redirect::route('admin.posts.show');
+            return Redirect::route('admin.posts.index');
         } catch(Exception $e){
             return($e);
         }
@@ -131,7 +131,7 @@ class AdminPostController extends Controller
             //     $post->tags()->save($tag);
             // }
 
-            return Redirect::route('admin.posts.show');
+            return Redirect::route('admin.posts.index');
         }  catch(Exception $e){
             return ($e);
         }
@@ -140,7 +140,7 @@ class AdminPostController extends Controller
     public function delete(Post $post){
         try{
             $result = $post->delete();
-            return Redirect::route('admin.posts.show');
+            return Redirect::route('admin.posts.index');
         } catch( Exception $e){
             return($e);
         }
