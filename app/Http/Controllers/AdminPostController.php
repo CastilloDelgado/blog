@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class AdminPostController extends Controller
 {
-    public function show(){
+    public function index(){
         return Inertia::render('Admin/AllPosts', [
             "posts" => Post::with(['author', 'tags', 'images'])->orderByDesc('created_at')->get()
         ]);
@@ -27,10 +27,9 @@ class AdminPostController extends Controller
 
     function create(){
         try{
-            // return Inertia::render('CreatePost', [
-            //     "tags" => Tag::all()
-            // ]);
-            return "Yes";
+            return Inertia::render('CreatePost', [
+                "tags" => Tag::all()
+            ]);
         } catch(Exception $e){
             return($e);
         }
@@ -138,9 +137,9 @@ class AdminPostController extends Controller
         }
     }
 
-    public function delete($id){
+    public function delete(Post $post){
         try{
-            $result = Post::find($id)->delete();
+            $result = $post->delete();
             return Redirect::route('admin.posts.show');
         } catch( Exception $e){
             return($e);

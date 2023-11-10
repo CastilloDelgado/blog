@@ -45,7 +45,7 @@ const galleryImages = computed(() => {
 
 function submit(){
     form.slug = slug;
-    form.post('/posts')
+    form.post('/admin/posts')
 }
 
 defineProps({

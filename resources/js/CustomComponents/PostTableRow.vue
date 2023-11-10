@@ -10,7 +10,7 @@ const props = defineProps({
 
 
 function deletePost(){
-    router.delete('/admin/posts/'  + props.post.id);
+    router.delete(`/admin/posts/${props.post.id}`);
 }
 
 </script>

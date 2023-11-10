@@ -7,7 +7,9 @@ import Banner1 from '@/CustomComponents/Banner1.vue';
 <template>
     <div class="bg-primary-50 scroll-smooth">
         <Navbar />    
-        <slot />
+        <div class="min-h-[80vh]">
+            <slot />
+        </div>
         <Footer />
     </div>
 </template>

@@ -20,7 +20,10 @@ defineProps({
                 <b class="text-xl text-primary-800">Todos nuestros posts</b>
             </div>
             <div class="flex justify-center gap-2 lg:gap-8 flex-wrap mb-8" >
-                <PostBadge v-for="post in posts" :key="post.id" :post="post" class="bg-primary-200"/>
+                <PostBadge v-if="posts.length > 0" v-for="post in posts" :key="post.id" :post="post" class="bg-primary-200"/>
+                <div v-else>
+                    <p>Aún no hay posts publicados :(</p>
+                </div>
             </div>
         </div>
     </Layout>

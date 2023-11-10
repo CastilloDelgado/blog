@@ -10,19 +10,6 @@ use Inertia\Inertia;
 use App\Models\Post;
 use App\Models\Tag;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
-
 // PUBLIC ROUTES
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -41,21 +28,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    // Admin Profile Section
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
     Route::patch('/admin/profile', [ProfileController::class, 'update'])->name('admin.profile.update');
-
-    // Admin Posts Section
-    Route::get('/admin/posts', [AdminPostController::class, 'show'] )->name('admin.posts.show');
+    Route::get('/admin/posts', [AdminPostController::class, 'index'] )->name('admin.posts.index');
+    Route::post('/admin/posts', [AdminPostController::class, 'store'])->name('admin.posts.store');
+    Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('admin.posts.create');
     Route::get('/admin/posts/{post}', [AdminPostController::class, 'edit'] )->name('admin.posts.edit');
     Route::put('/admin/posts/{post}', [AdminPostController::class, 'update'])->name('admin.posts.update');
-    // Route::get('/admin/posts/create', [AdminPostController::class, 'create'])->name('admin.posts.create');
-    Route::get('/admin/posts/create', function(){
-        return("Hello");
-    });
-    Route::post('/posts', [AdminPostController::class, 'store'])->name('posts.store');
-    Route::delete('/admin/posts/{id}', [AdminPostController::class, 'delete'])->name('post.delete');
+    Route::delete('/admin/posts/{post}', [AdminPostController::class, 'delete'])->name('admin.post.delete');
 });
 
 require __DIR__.'/auth.php';
