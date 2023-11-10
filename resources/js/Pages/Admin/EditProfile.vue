@@ -19,42 +19,66 @@ onMounted(() => {
 <template>
     <AdminLayout>  
         <Head title="Mi perfil" /> 
-        <div class="container mx-auto">
-            <div class="mb-4 pb-2 border-b-2 px-2 border-primary-400 mb-6" >
-                <b class="text-xl text-primary-600">!Hola, {{ user.name }}!</b>
-            </div>
-            <div class="flex justify-center gap-2 flex-wrap mb-8" >
-                <form @submit.prevent="submit">
-                    <div class="mb-2 w-full">
-                        <div class="flex">
-                            <label class="self-start" for="name">Nombre</label>
-                            <input class="ml-4 w-full" id="name"  type="text" maxlength="60" />
+        <div class="mb-4 pb-2 px-2 mb-6 border-b-2 border-primary-400" >
+            <b class="text-xl text-primary-600">¡Hola, {{ user.name }}!</b>
+        </div>
+        <div class="flex justify-center">
+            <div class="container max-w-lg">
+                <div class="pb-2 px-2 mb-6">
+                    <p class="text-center font-bold text-xl mb-4">Información de tu perfil </p>
+                    <form @submit.prevent="submit">
+                        <div class="mb-2 w-full">
+                            <div class="flex">
+                                <label class="self-start" for="name">Nombre</label>
+                                <input class="ml-4 w-full" id="name"  type="text" maxlength="60" />
+                            </div>
+                            <p class="text-xs text-right mt-1">120 caracteres máximo</p>
                         </div>
-                        <p class="text-xs text-right mt-1">120 caracteres máximo</p>
-                    </div>
-                    <div class="mb-2 w-full">
-                        <div class="flex">
-                            <label class="self-start" for="email">Correo</label>
-                            <input class="ml-4 w-full" id="email"  type="text" maxlength="60" />
+                        <div class="mb-2 w-full">
+                            <div class="flex">
+                                <label class="self-start" for="email">Correo</label>
+                                <input class="ml-4 w-full" id="email"  type="text" maxlength="60" />
+                            </div>
+                            <p class="text-xs text-right mt-1">120 caracteres máximo</p>
                         </div>
-                        <p class="text-xs text-right mt-1">120 caracteres máximo</p>
-                    </div>
-                    <div class="mb-2 w-full">
-                        <div class="flex">
-                            <label class="self-start" for="email">Correo</label>
-                            <input class="ml-4 w-full" id="email"  type="text" maxlength="60" />
+                        <CustomButton 
+                            type="submit" 
+                            class="bg-primary-600 hover:bg-primary-800 text-primary-100 w-full" 
+                            title="Actualizar información"
+                        />
+                    </form>
+                </div>
+                <div class="pb-2 px-2 mb-6">
+                    <p class="text-center font-bold text-xl mb-4">Actualizar contraseña</p>
+                    <form @submit.prevent="submit">
+                        <div class="mb-2 w-full">
+                            <div class="flex">
+                                <label class="self-start" for="name">Contraseña actual</label>
+                                <input class="ml-4 w-full" id="name"  type="text" maxlength="60" />
+                            </div>
+                            <p class="text-xs text-right mt-1">Ingresa tu contraseña actual</p>
                         </div>
-                        <p class="text-xs text-right mt-1">120 caracteres máximo</p>
-                    </div>
-                    <div class="mb-2 w-full">
-                        <div class="flex">
-                            <label class="self-start" for="email">Correo</label>
-                            <input class="ml-4 w-full" id="email"  type="text" maxlength="60" />
+                        <div class="mb-2 w-full">
+                            <div class="flex">
+                                <label class="self-start" for="email">Nueva Contraseña</label>
+                                <input class="ml-4 w-full" id="email"  type="text" maxlength="60" />
+                            </div>
+                            <p class="text-xs text-right mt-1">Ingresa unan ueva contraseña</p>
                         </div>
-                        <p class="text-xs text-right mt-1">120 caracteres máximo</p>
-                    </div>
-                    <CustomButton type="submit" class="bg-primary-600 hover:bg-primary-800 text-primary-100 w-full" title="Publicar Post!">Publicar Post!</CustomButton>
-                </form>
+                        <div class="mb-2 w-full">
+                            <div class="flex">
+                                <label class="self-start" for="email">Confirmar Contraseña</label>
+                                <input class="ml-4 w-full" id="email"  type="text" maxlength="60" />
+                            </div>
+                            <p class="text-xs text-right mt-1">Confirma tu nueva contraseña para continuar</p>
+                        </div>
+                        <CustomButton 
+                            type="submit" 
+                            class="bg-primary-600 hover:bg-primary-800 text-primary-100 w-full" 
+                            title="Actualizar contraseña"
+                        />
+                    </form>
+                </div>
             </div>
         </div>
     </AdminLayout>

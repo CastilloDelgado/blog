@@ -33,16 +33,16 @@ export const ADMIN_OPTIONS = [
     },
     {
         id: 2,
-        title: "Posts",
-        alt: "posts",
-        link: '/admin/posts',
+        title: "Crear Post",
+        alt: "create-posts",
+        link: '/admin/posts/create',
         selected:false
     },
     {
         id: 3,
-        title: "Crear Post",
-        alt: "create-posts",
-        link: '/admin/posts/create',
+        title: "Posts",
+        alt: "posts",
+        link: '/admin/posts',
         selected:false
     },
 ]
