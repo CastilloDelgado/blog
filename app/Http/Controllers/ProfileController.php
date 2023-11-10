@@ -27,6 +27,19 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function updateInfo(Request $request)
+    {
+        try {
+            $user = $request->user();
+            $user->name = $request->name;
+            $user->save();
+
+            return Redirect::route('admin.profile.edit');
+        } catch(Exception $e){
+            return($e);
+        }
+    }
+
     /**
      * Update the user's profile information.
      */
