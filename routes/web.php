@@ -30,7 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::put('/admin/profile/update-info', [ProfileController::class, 'updateInfo'])->name('admin.profile.update-info');
+    Route::post('/admin/profile/update-image', [ProfileController::class, 'updateImage'])->name('admin.profile.update-image');
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
+
+
     Route::patch('/admin/profile', [ProfileController::class, 'update'])->name('admin.profile.update');
     Route::get('/admin/posts', [AdminPostController::class, 'index'] )->name('admin.posts.index');
     Route::post('/admin/posts', [AdminPostController::class, 'store'])->name('admin.posts.store');

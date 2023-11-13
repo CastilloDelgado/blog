@@ -1,8 +1,10 @@
 <script setup>
 import AdminLayout from '@/BaseComponents/AdminLayout.vue';
 import CustomButton from '@/CustomComponents/CustomButton.vue';
+import EditProfileImage from '@/CustomComponents/EditProfileImage.vue';
 import UploadImage from '@/CustomComponents/UploadImage.vue';
 import { Head, useForm } from '@inertiajs/vue3';
+import { computed } from 'vue';
 import { onMounted } from 'vue';
 
 const props = defineProps({
@@ -18,7 +20,7 @@ const profileInfoForm = useForm({
 })
 
 const profileImageForm = useForm({
-    image: ''
+    newImage: ''
 })
 
 const updatePasswordForm = useForm({
@@ -33,15 +35,12 @@ profileInfoForm.defaults({
     email: props.user.email
 })
 
-const submitProfileInfo = () => {
-    profileInfoForm.put('/admin/profile/update-info')
-}
-
+const submitProfileInfo = () => profileInfoForm.put('/admin/profile/update-info')
 
 onMounted(() => {
     profileInfoForm.reset()
-    console.log(props.user)
 })
+
 </script>
 
 <template>
@@ -76,24 +75,9 @@ onMounted(() => {
                         />
                     </form>
                 </div>
-                <div class="pb-2 px-2 mb-6">
-                    <p class="text-center font-bold text-xl mb-4">Imagen de perfil </p>
-                    <form @submit.prevent="submit">
-                        <div class="w-full flex justify-center">
-                            <UploadImage :image="user.image_url" /> 
-                        </div>
-                        <div class="mb-6">
-                            <div class="flex mb-2">
-                                <label class="self-start" for="image">Imagen Principal</label>
-                                <label for="image" class="ml-3 bg-primary-500 hover:bg-primary-600 text-primary-100 px-4 py-2 transition rounded font-bold text-center">
-                                    Click aquí para agregar imagen principal.
-                                </label>
-                                <!-- <input id="image" class="hidden" type="file" @input="form.image = $event.target.files[0]" /> -->
-                                <input id="image" class="hidden" type="file" />
-                            </div>
-                        </div>
-                    </form>
-                </div>
+
+                <EditProfileImage :current-image="user.image_url"/>
+
                 <div class="pb-2 px-2 mb-6">
                     <p class="text-center font-bold text-xl mb-4">Actualizar contraseña</p>
                     <form @submit.prevent="submit">

@@ -40,6 +40,23 @@ class ProfileController extends Controller
         }
     }
 
+    public function updateImage(Request $request)
+    {
+        try{
+            if($request->hasFile('newImage')){
+                $user = $request->user();
+                $path = $request->file('newImage')->store('/images');
+                $user->image_url = $path;
+                $user->save();
+                return Redirect::route('admin.profile.edit');
+            } else {
+                return($request);
+            }
+        } catch(Exception $e){
+            return($e);
+        }
+    }
+
     /**
      * Update the user's profile information.
      */

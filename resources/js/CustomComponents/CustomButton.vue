@@ -11,6 +11,9 @@ const props = defineProps({
     action: {
         type: Function,
         default: () => console.log("Undefined function")
+    },
+    type:{
+        type: String,
     }
 })
 </script>
@@ -19,6 +22,7 @@ const props = defineProps({
     <button 
         class="px-4 py-2 hover:scale-105 transition rounded font-bold"
         @click="action"
+        :type="type"
     >
         {{  title  }}
     </button>
