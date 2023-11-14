@@ -57,7 +57,7 @@ class AdminPostController extends Controller
             $attributes['user_id'] =  $request->user()->id;
 
             // Upload main image file
-            $attributes['image_url'] = $request->file('image')->store('public/images');
+            $attributes['image_url'] = $request->file('image')->store('images');
 
             // Create post
             $post = Post::create($attributes);
@@ -66,7 +66,7 @@ class AdminPostController extends Controller
             $postImages = $request->file('postImages');
             
             foreach($postImages as $postImageFile){
-                $postImageUrl = $postImageFile->store('public/images');
+                $postImageUrl = $postImageFile->store('images');
                 PostImage::create([
                     'post_id' => $post->id,
                     'image_url' => $postImageUrl
