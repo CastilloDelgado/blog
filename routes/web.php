@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::put('/admin/profile/update-info', [ProfileController::class, 'updateInfo'])->name('admin.profile.update-info');
-    Route::post('/admin/profile/update-image', [ProfileController::class, 'updateImage'])->name('admin.profile.update-image');
+    Route::put('/admin/profile/update-image', [ProfileController::class, 'updateImage'])->name('admin.profile.update-image');
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('admin.profile.edit');
 
 

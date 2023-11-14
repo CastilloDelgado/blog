@@ -19,7 +19,7 @@ const imageToShow = computed(() => form.newImage ? URL.createObjectURL(form.newI
 
 const handleImageSelection = (event) => form.newImage = event.target.files[0]
 
-const submitForm = () => form.post('/admin/profile/update-image')
+const submitForm = () => form.put('/admin/profile/update-image')
 
 </script>
 
