@@ -23,6 +23,7 @@ import productsImage3 from "../../images/products/3.jpg";
 
 import video from "../../videos/presentation.mp4";
 import poster from "../../images/video-cover.jpeg"
+import NewsletterBanner from "@/CustomComponents/NewsletterBanner.vue";
 
 // import Header from '@/CustomComponents/Header.vue';
 // import Banner1 from '@/CustomComponents/Banner1.vue';
@@ -70,6 +71,8 @@ defineProps({
             title="Despertar de la conciencia" 
             description="YuKal tiene una visión clara que queremos compartir contigo, donde te acompañaremos de la mano en el rediseño del camino de vida que has venido a transitar."
         />
+        
+        <NewsletterBanner />
 
         <CompanyProducts
             title="Nuestros Servicios"
