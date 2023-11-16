@@ -71,28 +71,35 @@ defineProps({
               leave-to="opacity-0 scale-95"
             >
               <DialogPanel
-                class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+                class="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
               >
                 <DialogTitle
                   as="h3"
-                  class="text-lg font-medium leading-6 text-gray-900"
+                  class="font-bold leading-6 text-primary-900 text-center text-2xl mb-4"
                 >
-                  Payment successful
+                  {{ product.title }}
                 </DialogTitle>
                 <div class="mt-2">
-                  <p class="text-sm text-gray-500">
-                    Your payment has been successfully submitted. We’ve sent you
-                    an email with all of the details of your order.
+                  <p class="text-lg text-primary-700 text-center">
+                    {{ product.detail.description }}
+                  </p>
+                </div>
+                <div v-for="bullet in product.detail.bullets" class="mt-2">
+                  <p class="text-lg text-primary-600 font-bold">
+                    {{ bullet.title }}
+                  </p>
+                  <p class="text-sm text-primary-800">
+                    {{ bullet.description }}
                   </p>
                 </div>
   
-                <div class="mt-4">
+                <div class="mt-4 w-full flex justify-center">
                   <button
                     type="button"
-                    class="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    class="inline-flex text-primary-800 justify-center rounded-md border border-transparent bg-primary-100 px-4 py-2 text-sm font-medium text-primary-900 hover:bg-primary-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                     @click="closeModal"
                   >
-                    Got it, thanks!
+                    Cerrar
                   </button>
                 </div>
               </DialogPanel>

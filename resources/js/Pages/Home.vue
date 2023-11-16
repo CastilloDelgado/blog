@@ -89,6 +89,31 @@ defineProps({
                         'Crea tu primer habito en consciencia en 21 días',
                     ],
                     image: productsImage1,
+                    detail: {
+                        description: '',
+                        bullets: [
+                            {
+                                title: 'Mujer Medicina ',
+                                description: ''
+                            },
+                            {
+                                title: 'Circulo de mujeres (1 vez al mes con temas seleccionados) DISPONIBLE',
+                                description: ''
+                            },
+                            {
+                                title: 'Útero divino / ceremonia',
+                                description: ''
+                            },
+                            {
+                                title: 'Introducción a la meditación',
+                                description: ''
+                            },
+                            {
+                                title: 'Crea tu primer habito en consciencia en 21 días',
+                                description: ''
+                            },
+                        ]
+                    }
                 },
                 {
                     id: 2,
@@ -101,13 +126,35 @@ defineProps({
                         'Cereminia del útero'
                     ],
                     image: productsImage2,
+                    detail: {
+                        description: '',
+                        bullets: [
+                            {
+                                title:'Ceremonia de Cacao',
+                                description: 'Viaja a través de la meditación en esta hermosa ceremonia que Yukal ofrece para ti, concentrándote en el presente y comienza a trabajar en tu mente, cuerpo, alma y emociones. El cacao es uno de los facilitadores, maestros y guías más poderosos. Apertura nuestro chacra corazón hacía la transformación a través del amor propio, nos ayuda a experimentar de manera segura el despertar de consciencia y la introspección intensionándolo en cada toma, conectando contigo mismo, nos ayuda a liberar patrones, bloqueos y creencias. Nos conecta con el Yo Superior, con la intuición. '
+                            },
+                            {
+                                title:'Aniversario de vida',
+                                description: 'La Ceremonia de Aniversario de vida, es un espacio intimo donde se reúnen la persona que cumple años con sus allegados y a través de rituales y dinámicas cuidadosamente diseñadas y personalizada se conmemora al festejado valorando lo importante que es celebrar conscientemente la vida.'
+                            },
+                            {
+                                title:'Sembrando mi proyecto',
+                                description: 'La siembra de marca es una ceremonia holística donde se le da nacimiento al emprendimiento de la persona, otorgándole al proyecto la importancia espiritual a través de los elementos de nuestra madre tierra y dándole un corazón con su energía particular y necesaria. En el sentido más básico, se trata de conectar con lo que es importante para la persona que emprende de manera que eleve y enriquezca su espíritu y el del proyecto con una entidad propia.'
+                            },
+                        ]
+                    }
                 },
+                
                 {
                     id: 3,
                     title: 'Escuela',
                     description:
                         'Disponible 2024',
                     image: productsImage3,
+                    detail: {
+                        description: '¡Muy pronto más información de nuestra escuela!',
+                        bullets: []
+                    }
                 },
             ]"
         />
