@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\NewsletterController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -23,6 +24,9 @@ Route::get('tags/{tag:name}', function(Tag $tag){
         'posts' => $tag->posts
     ]);
 });
+
+// NEWSLETTER
+Route::post('suscribe', [NewsletterController::class, 'suscribe'])->name('newsletter.suscribe');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
