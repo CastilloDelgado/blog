@@ -2,6 +2,9 @@
 import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import { SOCIAL_MEDIA_LINKS } from "@/constants"
+import facebook from "../../images/icons/facebook.png"
+import instagram from "../../images/icons/instagram.png"
+import youtube from "../../images/icons/youtube.png"
 
 const links = ref(SOCIAL_MEDIA_LINKS)
 </script>
@@ -15,19 +18,23 @@ const links = ref(SOCIAL_MEDIA_LINKS)
                     <p class="text mb-2 font-bold">Yukal - Rediseñando el camino</p>
                     <p class="text-xs">Email: <a class="font-bold" href="#">contacto@yu-kal.com</a></p>
                     <p class="text-xs">Dirección: <a class="font-bold" href="#">contacto@yu-kal.com</a></p>
-                    <p class="text-xs">Teléfono: <a class="font-bold" href="#">+52 33-1122-4455</a></p>
-                    <p class="text-xs">Página creada por: <a class="font-bold" href="#">marcocastillo1997@gmail.com</a></p>
+                    <!-- <p class="text-xs">Página creada por: <a class="font-bold" href="#">marcocastillo1997@gmail.com</a></p> -->
                 </div>
             </div>
             <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
                 <div class="text-center sm:text-right text-xs text-primary-300">
                     <p class="mb-2">Enlaces a nuestras redes sociales</p>
-                    <div  class="flex justify-center sm:justify-end gap-2">
+                    <!-- <div  class="flex justify-center sm:justify-end gap-2">
                         <div v-for="link in links" :key="link.media" class="bg-primary-100 hover:scale-110 transition w-5 h-5 rounded-full text-center">
                             <a class="text-primary-700 font-bold h-full inline-block align-middle"  :href="link.link" :title="link.media">
                                 {{ link.title[0] }}
                             </a>
                         </div>
+                    </div> -->
+                    <div class="w-full flex justify-end gap-4">
+                        <a href="https://www.facebook.com/profile.php?id=61553355485348" target="_blank"><img :src="facebook" class="w-6 h-6 hover:scale-[105%] transition" /></a>
+                        <a href="https://www.instagram.com/yukal55/" target="_blank"><img :src="instagram" class="w-6 h-6 hover:scale-[105%] transition" /></a>
+                        <a href="https://www.youtube.com/channel/UCES11jeVrqq2QrK8tgrBLtQ" target="_blank"><img :src="youtube" class="w-6 h-6 hover:scale-[105%] transition" /></a>
                     </div>
                 </div>
             </div>

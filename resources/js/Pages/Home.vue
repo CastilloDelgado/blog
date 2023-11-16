@@ -112,7 +112,7 @@ defineProps({
             ]"
         />
 
-        <ContactForm />
+        <ContactForm message="Completa el formulario para enviarnos tus dudas y poder contactarte en breve."/>
         <!-- <Header :tags="tags" /> -->
         <!-- Highlights Section -->
         <!-- <HighlightsSection :posts="highlightPosts" /> -->

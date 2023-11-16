@@ -1,5 +1,6 @@
 <script setup>
 import CustomButton from './CustomButton.vue';
+import SocialMediaIcons from './SocialMediaIcons.vue';
 
 
 defineProps({
@@ -34,10 +35,9 @@ defineProps({
                     <div class="w-full h-full grid place-content-center">
                         <div class="py-16 lg:py-2 px-12">
                             <p class="text-4xl text-center font-bold text-secondary-600 mb-4" v-if="title">{{ title }}</p>
-                            <p class="text-justify text-lg text-secondary-800 mb-2" v-if="description">{{ description }}</p>
-                            <!-- <div class="w-full flex justify-center mt-8">
-                                <CustomButton title="Más información" class="bg-secondary-600 hover:bg-secondary-700 text-secondary-100" />
-                            </div> -->
+                            <p class="text-justify text-lg text-secondary-800 mb-6" v-if="description">{{ description }}</p>
+                            <p class="text-center text-secondary-800 text-lg mb-2">Siguenos en nuestras redes</p> 
+                            <SocialMediaIcons />
                         </div>
                     </div>
                 </div>
