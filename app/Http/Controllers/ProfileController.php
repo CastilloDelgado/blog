@@ -45,7 +45,7 @@ class ProfileController extends Controller
         try{
             if($request->hasFile('newImage')){
                 $user = $request->user();
-                $path = $request->file('newImage')->store('images');
+                $path = $request->file('newImage')->store('public/images');
                 $user->image_url = $path;
                 $user->save();
                 return Redirect::route('admin.profile.edit');
