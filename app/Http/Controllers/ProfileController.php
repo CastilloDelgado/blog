@@ -42,19 +42,12 @@ class ProfileController extends Controller
 
     public function updateImage(Request $request)
     {
-        try{
-            if($request->hasFile('image')){
-                $user = $request->user();
-                $path = $request->file('image')->store('public/images');
-                $user->image_url = $path;
-                $user->save();
-                return Redirect::route('admin.profile.edit');
-            } else {
-                return($request);
-            }
-        } catch(Exception $e){
-            return($e);
-        }
+        $user = $request->user();
+        $path = $request->file('image')->store('public/images');
+        $user->image_url = $path;
+        $user->save();
+        return Redirect::route('admin.profile.edit');
+
     }
 
     /**
