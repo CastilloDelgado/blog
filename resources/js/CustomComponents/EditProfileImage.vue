@@ -12,12 +12,10 @@ const props = defineProps({
 })
 
 const form = useForm({
-    newImage: null
+    image: null
 });
 
-const imageToShow = computed(() => form.newImage ? URL.createObjectURL(form.newImage) : props.currentImage)
-
-const handleImageSelection = (event) => form.newImage = event.target.files[0]
+const imageToShow = computed(() => form.image ? URL.createObjectURL(form.image) : props.currentImage)
 
 const submitForm = () => form.put('/admin/profile/update-image')
 
@@ -36,7 +34,7 @@ const submitForm = () => form.put('/admin/profile/update-image')
                     <label for="image" class="ml-3 bg-primary-500 hover:bg-primary-600 text-primary-100 px-4 py-2 transition rounded font-bold text-center">
                         Click aquí para agregar imagen principal.
                     </label>
-                    <input id="image" class="hidden" type="file" @input="handleImageSelection" />
+                    <input id="image" class="hidden" type="file" @input="form.image = $event.target.files[0]" />
                 </div>
             </div>
             <CustomButton 
