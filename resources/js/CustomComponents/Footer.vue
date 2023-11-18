@@ -12,7 +12,7 @@ const links = ref(SOCIAL_MEDIA_LINKS)
 
 <template>
     <div class="bg-primary-900 py-6 w-full">
-        <div class="container mx-auto max-w-7xl flex flex-col sm:flex-row  px-6 mb-4">
+        <div class="container mx-auto max-w-6xl flex flex-col sm:flex-row  px-6 mb-4">
             <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
                 <div class="text-center sm:text-left text-primary-300">
                     <p class="text mb-2 font-bold">Yukal - Rediseñando el camino</p>
@@ -39,7 +39,7 @@ const links = ref(SOCIAL_MEDIA_LINKS)
                 </div>
             </div>
         </div>
-        <div class="text-xs container  max-w-7xl  mx-auto flex justify-between px-6 text-primary-600"> 
+        <div class="text-xs container  max-w-6xl  mx-auto flex justify-between px-6 text-primary-600"> 
             <div class="flex flex-col sm:flex-row justify-left gap-2 w-full sm:w-1/2">
                 <a v-for="link in links" :key="link.media" target="_blank" :href="link.link" class="hover:border-b border-primary-600">{{ link.title }}</a>
             </div>

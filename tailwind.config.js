@@ -12,11 +12,8 @@ export default {
 
     theme: {
         fontFamily: {
-            'sans': ['acumin-pro', 'sans'],
-        },
-        fontWeight: {
-            normal: '100',
-            bold: '500',
+            'serif': ['Libre Baskerville', 'serif'],
+            'sans': ['Almarai', 'sans-serif'],
         },
         extend: {
             colors: {

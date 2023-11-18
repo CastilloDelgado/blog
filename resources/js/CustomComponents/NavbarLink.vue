@@ -15,12 +15,12 @@ const selected = computed(() => router.page.url === props.option.link)
 
 <template>
     <Link :href="option.link" 
-        class="grid place-content-center text-light-200 mr-3 content-center hover:text-light-50"
+        class="grid place-content-center text-black mr-3 content-center hover:-bottom-2"
         :class="{
-            'font-bold border-b border-white text-light-50': selected
+            'font-bold border-b border-black': selected
         }"
 
-    >
+    >   
         {{ option.title }}
     </Link>
 </template>

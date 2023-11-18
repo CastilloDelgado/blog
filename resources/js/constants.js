@@ -8,15 +8,8 @@ export const NAVBAR_OPTIONS = [
         selected: true
     },
     {
-        id: 2,
-        title: "Servicios",
-        alt: "servicios",
-        link: "#services",
-        selected: false
-    },
-    {
         id: 3,
-        title: "Nuestro Blog",
+        title: "Blog",
         alt: "blog",
         link: "/posts",
         selected: false

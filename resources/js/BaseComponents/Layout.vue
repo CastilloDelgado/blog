@@ -5,9 +5,9 @@ import Banner1 from '@/CustomComponents/Banner1.vue';
 </script>
 
 <template>
-    <div class="bg-primary-50 scroll-smooth">
+    <div class="bg-neutral-300 scroll-smooth w-full justify-center">
         <Navbar />    
-        <div class="min-h-[80vh]">
+        <div class="min-h-[80vh] max-w-6xl mx-auto">
             <slot />
         </div>
         <Footer />
