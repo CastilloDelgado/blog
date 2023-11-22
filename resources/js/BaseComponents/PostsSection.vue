@@ -46,7 +46,7 @@ defineProps({
                     }"
                 />
             </div>
-            <div class="flex justify-end mb-6 w">
+            <div class="flex justify-center mb-6">
                 <Link href="/posts" class="">    
                     <CustomButton title="Más reviews" class="bg-black hover:bg-white hover:text-black border-2 border-black text-primary-100" />
                 </Link>

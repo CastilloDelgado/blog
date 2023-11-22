@@ -5,32 +5,34 @@ defineProps({
     message: {
         type: String,
         rquired: true
+    },
+
+    url: {
+        type: String,
+        required: true
     }
 })
 </script>
 
 <template>
-    <div id="contact-form" class="bg-dark-700 background px-2" >
-        <div class="flex justify-center py-16 text-white">
-            <form class="w-full sm:2/3 lg:w-1/2" action="https://formsubmit.co/contacto@yu-kal.com" method="POST">
-                <p class="text-center text-4xl font-bold mb-4">Contacto</p>
-                <p class="text-center text-lg  px-6 lg:px-24 mb-8">{{ message }}</p>
-                <div class="lg:px-16">
-                    <div class="mb-2 flex flex-col">
-                        <label class="text-lg mb-1" for="">Nombre Completo</label>
-                        <input class="bg-dark-400 px-2 py-1 text-white placeholder:text-dark-100" type="text" name="name" placeholder="Nombre Completo" required/>
+    <div id="contact-form" class="bg-white px-2" >
+        <div class="flex justify-center py-10 md:py-16 text-black">
+            <form class="w-full sm:2/3 lg:w-1/2" :action="url" method="POST">
+                <p class="text-center font-serif text-xl font-bold mb-4">¿Tienes algo que decirnos?</p>
+                <p class="text-center px-6 lg:px-24 mb-8">{{ message }}</p>
+                <div class="lg:px-16 w-full flex flex-col mx-auto jusitify-center sm:w-2/3 lg:w-full">
+                    <div class="mb-2 w-full">
+                        <input class="border-2 border-black mb-2 md:mb-0 md:mr-1 placeholder:text-black w-full" type="text" name="name" placeholder="Nombre Completo" required/>
                     </div>
-                    <div class="mb-2 flex flex-col">
-                        <label class="text-lg mb-1" for="">Correo Electrónico</label>
-                        <input class="bg-dark-400 px-2 py-1 text-white placeholder:text-dark-100"  placeholder="Correo electrónico" type="email" name="email" required/>
+                    <div class="mb-2 w-full">
+                        <input class="border-2 border-black mb-2 md:mb-0 md:mr-1 placeholder:text-black w-full"  placeholder="Correo electrónico" type="email" name="email" required/>
                     </div>
 
-                    <div class="mb-2 flex flex-col mb-6">
-                        <label class="text-lg mb-1" for="">Escribe aquí tus dudas</label>
-                        <textarea rows="6" class="bg-dark-400 px-2 py-1 text-white placeholder:text-dark-100"  placeholder="..." name="message" required />
+                    <div class="mb-2 w-full">
+                        <textarea rows="6" class="border-2 border-black mb-2 md:mb-0 md:mr-1 placeholder:text-black w-full"  placeholder="Escribe aquí tu mensaje..." name="message" required />
                     </div>
                     <div class="flex justify-center">
-                        <CustomButton class="text-lg bg-dark-500 hover:bg-dark-600 text-dark-100 hover:scale-100 w-full" title="Enviar dudas" type="submit"/>
+                        <CustomButton class="text-lg border-black border-2 bg-black hover:bg-white text-white hover:text-black w-full" title="Enviar" type="submit"/>
                     </div>
                 </div>
 
@@ -38,12 +40,4 @@ defineProps({
         </div>
     </div>
 </template>
-
-<style scoped>
-.background {
-    background-image: url("../../graphics/contact-background.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-</style>
 

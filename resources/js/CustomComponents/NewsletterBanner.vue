@@ -1,6 +1,6 @@
 <script setup>
 import CustomButton from './CustomButton.vue';
-import image from "../../images/welcome/3.jpg"
+import image from "../../images/banner-1.jpg"
 import { useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
@@ -18,27 +18,27 @@ const submitForm = () => form.post('/suscribe', {
 
 </script>
 <template>
-    <div class="bg-light-100 w-full py-6 lg:py-16">
-        <div class="lg:h-[60vh] mx-auto w-full container flex grid-place-content-center">
-            <div class="flex flex-col lg:flex-row">
-                <div class="lg:w-1/2"> 
-                    <img :src="image" alt="" class="h-full w-auto object-cover py-4">
-                </div>
-                <div class="lg:w-1/2 container grid place-content-center">
-                    <div class="container max-w-lg text-center px-6">
-                        <p class="font-bold text-4xl text-light-700 pb-2">Únete a nuestra comunidad</p>
-                        <p class="text-xl text-light-600 pb-8">Suscribete a nuestro newsletter para que recibas nuestros últimos post y noticias de nuestros proximos eventos y talleres.</p>
-                        <p class="text-sm text-light-600 mb-2">Ingresa su correo y da click en suscribirme</p>
-                        <form @submit.prevent="submitForm" class="w-full" v-if="!formSubmitted">
-                            <input required class="rounded border-2 border-light-600 bg-light-50 mr-2 w-64 placeholder:text-light-400 text-light-800 mb-2" v-model="form.email" type="email" placeholder="Ingresa tu correo electrónico...">
-                            <CustomButton class="bg-light-600 hover:bg-light-800 text-light-200 text-lg" title="Suscribete"/>
-                        </form>
-                        <div v-else>
-                            <p class="text-light-800 font-bold text-xl">¡Gracias por suscribirte!</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="flex flex-col lg:flex-row" id="newsletter">
+        <div class="w-100 lg:w-2/5 bg-black border-t-4 lg:border-t-0 lg:border-r-4 border-white flex justify-center flex-col px-16 py-32 lg:py-0">
+            <p class="font-serif text-4xl text-white text-center mb-4">Suscribete</p>
+            <p class="font-sans text-xl text-white text-center mb-12">Recibe las últimas noticias y reviews de tus conciertos favoritos!</p>
+            <form @submit.prevent="submitForm" class="w-full flex flex-col md:flex-row justify-center " v-if="!formSubmitted">
+                <input required class="border-2 border-white mb-2 md:mb-0 md:mr-1 placeholder:text-black" v-model="form.email" type="email" placeholder="Ingresa tu correo electrónico...">
+                <CustomButton class="bg-white border-2 hover:bg-black hover:text-white border-white" title="Suscribete"/>
+            </form>
+            <div v-else class="w-full justify-center">
+                <p class="thanks font-bold text-2xl text-center font-serif text-black">¡Gracias por suscribirte!</p>
             </div>
+        </div>
+        <div class="w-100 lg:w-3/5 object-fill">
+            <img :src="image" alt="" class="grayscale">
         </div>
     </div>
 </template>
+
+<style scoped>
+.thanks{
+ text-shadow: -1px 1px #ffffff;
+}
+
+</style>

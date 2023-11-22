@@ -16,14 +16,14 @@ const options = ref(NAVBAR_OPTIONS)
                     <Link href="/">
                         <div class="flex flex-shrink-0 items-center h-full">
                             <p class="text-3xl font-bold font-serif">Life & Live Music</p>
-                            <span class="text-xs font-sans h-full ml-2 align-top">[blog]</span>
+                            <span class="text-sm font-sans h-full ml-2 align-top">[blog]</span>
                         </div>
                     </Link>
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <div class="align-middle hidden sm:flex">
                         <NavbarLink v-for="option in options" :key="option.id" :option="option"  />
-                        <a href="#contact-form" class="ml-2">
+                        <a href="#newsletter" class="ml-2">
                             <CustomButton class="bg-black text-white hover:bg-white border-black border-2 hover:text-black" title="Suscribete"/>
                         </a>
                     </div>

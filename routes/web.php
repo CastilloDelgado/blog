@@ -11,6 +11,7 @@ use Inertia\Inertia;
 use App\Models\Post;
 use App\Models\Tag;
 
+
 // PUBLIC ROUTES
 Route::get('/', [PublicController::class, 'home'])->name('home');
 

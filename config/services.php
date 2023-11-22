@@ -35,5 +35,9 @@ return [
         'key' => env('MAILCHIMP_KEY'),
         'server' => env('MAILCHIMP_SERVER'),
         'list' => env('MAILCHIMP_LIST')
+    ],
+    
+    'formsubmit' => [
+        'url' => env('FORMSUBMIT_URL')
     ]
 ];

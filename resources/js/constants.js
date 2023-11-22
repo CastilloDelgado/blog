@@ -8,10 +8,17 @@ export const NAVBAR_OPTIONS = [
         selected: true
     },
     {
-        id: 3,
+        id: 2,
         title: "Blog",
         alt: "blog",
         link: "/posts",
+        selected: false
+    },
+    {
+        id: 3,
+        title: "Contacto",
+        alt: "contacto",
+        link: "#contact-form",
         selected: false
     },
 ]
