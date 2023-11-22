@@ -8,7 +8,7 @@ defineProps({
 
 <template>
     <Link :href="`/tags/${tag.slug}`">
-        <div class="mr-1 bg-black  px-2 hover:bg-white text-white hover:bg-black border-2 border-black hover:text-black">
+        <div class="bg-black  px-2 hover:bg-white text-white hover:bg-black border-2 border-black hover:text-black transition">
             <p class="text-xs capitalize " >{{ tag.name }}</p> 
         </div>
     </Link>
