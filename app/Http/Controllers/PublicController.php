@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     function home(){
         return Inertia::render('Home', [
-            'latestPosts' => Post::with('tags', 'author')->latest()->take(3)->get()
+            'latestPosts' => Post::with('tags', 'author')->latest()->take(8)->get()
         ]);
     }
 

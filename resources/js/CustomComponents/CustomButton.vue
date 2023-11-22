@@ -20,7 +20,7 @@ const props = defineProps({
 
 <template>
     <button 
-        class="px-4 py-2 hover:scale-105 transition"
+        class="px-3 py-1 transition"
         @click="action"
         :type="type"
     >

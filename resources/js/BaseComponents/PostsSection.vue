@@ -1,6 +1,6 @@
 <script setup>
 import CustomButton from '@/CustomComponents/CustomButton.vue';
-import PostBadge from '@/CustomComponents/PostBadge.vue';
+import SmallPostBadge from '@/CustomComponents/PostBadge.vue';
 import { BACKGROUND_COLORS } from '@/constants';
 import { Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
@@ -25,14 +25,24 @@ defineProps({
 </script>
 
 <template>
-    <div class="bg-primary-50">
-        <div class="container mx-auto py-6 lg:py-12">
-            <div class="text-center mb-8">
-                <p class="text-primary-600 text-4xl font-bold mb-42 capitalize" v-if="title">{{ title }}</p>
-                <p class="text-lg text-primary-800 mx-4 lg:mx-36 text-justify lg:text-center" v-if="description">{{ description }}</p>
+    <div class="bg-white w-full">
+        <div class="px-12">
+            <div class="pb-3 border-black border-b-2">
+                <p class="text-black text-xl font-bold capitalize" v-if="title">{{ title }}</p>
             </div>
-            <div class="flex justify-center gap-2 lg:gap-8 flex-wrap mb-8">
-                <PostBadge v-for="(post, index) in posts" class="bg-primary-200" :key="post.id" :post="post" />
+            <div class="grid grid-cols-4 gap-4">
+                <div class="..."></div>
+                <SmallPostBadge 
+                    v-for="(post, index) in posts" 
+                    :key="post.id" 
+                    :post="post" 
+                    :class="{
+                        'col-span-4': index === 0,
+                        'col-span-2': index === 1 ,
+                        'col-span-2': index === 2 ,
+                        'col-span-1': index >= 3 ,
+                    }"
+                />
             </div>
             <div class="flex justify-center lg:mb-2">
                 <Link href="/posts">    
