@@ -12,7 +12,7 @@ defineProps({
     <Link :href="`/posts/${post.id}`" class="col-span-4">
         <div class="w-full transition h-full grid grid-cols-1 content-between bg-neutral-200 border-2 border-black" >
             <div class="w-full flex flex-col lg:flex-row">
-                <img :src="post.image_url" alt="" class="h-[420px] w-1/2 object-cover">
+                <img :src="post.image_url" alt="" class="h-[500px] w-1/2 object-cover">
                 <div class="flex justify-center flex-col px-12 py-6 w-1/2">
                     <div class="h-full">
                         <p class="font-serif text-4xl text-center font-bold text-black capitalize mb-6">{{ post.title }}</p>

@@ -10,7 +10,7 @@ const options = ref(NAVBAR_OPTIONS)
 
 <template>
     <nav class="bg-white fixed w-full z-10 border-b-4 border-black">
-        <div class="mx-auto max-w-6xl">
+        <div class="mx-auto px-0 sm:px-6 xl:px-0 lg:max-w-6xl">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <Link href="/">
