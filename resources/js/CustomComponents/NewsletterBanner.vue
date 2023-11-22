@@ -24,7 +24,7 @@ const submitForm = () => form.post('/suscribe', {
             <p class="font-sans text-xl text-white text-center mb-12">Recibe las últimas noticias y reviews de tus conciertos favoritos!</p>
             <form @submit.prevent="submitForm" class="w-full flex flex-col md:flex-row justify-center " v-if="!formSubmitted">
                 <input required class="border-2 border-white mb-2 md:mb-0 md:mr-1 placeholder:text-black" v-model="form.email" type="email" placeholder="Ingresa tu correo electrónico...">
-                <CustomButton class="bg-white border-2 hover:bg-black hover:text-white border-white" title="Suscribete"/>
+                <CustomButton class="bg-white font-bold border-2 hover:bg-black hover:text-white border-white" title="Suscribete"/>
             </form>
             <div v-else class="w-full justify-center">
                 <p class="thanks font-bold text-2xl text-center font-serif text-black">¡Gracias por suscribirte!</p>

@@ -19,7 +19,7 @@
         <div class="flex justify-center mb-12">
             <div class="w-full lg:w-1/2">
                 <p class="text-2xl md:text-3xl text-center">
-                    Fotos <b>horribles</b> y buenas <b>historias</b> de momentos <b>inolvidables</b>.
+                    Buenas <b>historias</b> y Fotos <b>horribles</b> de momentos <b>inolvidables</b>.
                 </p>
             </div>
         </div>

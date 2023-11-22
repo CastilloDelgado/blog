@@ -5,5 +5,5 @@
 </script>
 
 <template>
-    <img :src="image_url" alt="" class="mb-2 rounded">
+    <img :src="image_url" alt="" class="mb-2">
 </template> 

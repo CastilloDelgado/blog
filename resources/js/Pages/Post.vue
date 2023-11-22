@@ -20,7 +20,7 @@ defineProps({
 <template>
     <Layout>
         <Head :title="post.title" />
-        <div class="bg-white pt-24 pb-8">
+        <div class="bg-white pt-12 pb-8">
             <div class="bg-white px-2 md:px-0 container mx-auto">
                 <!-- Post Layout -->
                 <div class="px-6 md:px-12 lg:px-32 ">
@@ -32,7 +32,7 @@ defineProps({
                                     <p class="font-bold text-sm border-b border-b-transparent hover:border-black">{{ "< Regresar" }}</p>
                                 </Link>
                             </div>
-                            <div class="flex flex-wrap">
+                            <div class="flex flex-wrap gap-1">
                                 <!-- Tag -->
                                 <TagBadge  v-for="tag in post.tags" :tag="tag" />
                             </div>
@@ -66,10 +66,10 @@ defineProps({
                                 <p>{{ paragraph }}</p>
                             </div>
 
-                            <div class="w-full flex justify-center bg-gray-200 mt-4  h-max-screen md:max-h-[50vh]"> 
+                            <div class="w-full flex justify-center bg-black mt-4 h-max-screen md:max-h-[70vh]"> 
                                 <!-- Image Carousel (Create component when working) -->
-                                <Splide :options="{ rewind: true }" aria-label="Concert images" class=" h-max-screen md:max-h-[50vh]">
-                                    <SplideSlide v-for="image in post.images" class="h-max-screen md:max-h-[50vh] w-full flex justify-center">
+                                <Splide :options="{ rewind: true }" aria-label="Concert images" class=" h-max-screen md:max-h-[60vh]">
+                                    <SplideSlide v-for="image in post.images" class="h-max-screen md:max-h-[60vh] w-full flex justify-center">
                                         <img :src="image.image_url" alt="Sample 1" class="h-full object-contain">
                                     </SplideSlide>
                                 </Splide>

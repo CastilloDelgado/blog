@@ -32,7 +32,7 @@ defineProps({
                         <textarea rows="6" class="border-2 border-black mb-2 md:mb-0 md:mr-1 placeholder:text-black w-full"  placeholder="Escribe aquí tu mensaje..." name="message" required />
                     </div>
                     <div class="flex justify-center">
-                        <CustomButton class="text-lg border-black border-2 bg-black hover:bg-white text-white hover:text-black w-full" title="Enviar" type="submit"/>
+                        <CustomButton class="text-lg border-black border-2 bg-black hover:bg-white text-white hover:text-black w-full font-bold" title="Enviar" type="submit"/>
                     </div>
                 </div>
 
